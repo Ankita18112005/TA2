@@ -4,6 +4,7 @@
 import Link from "next/link";
 import { ArrowLeft, Play, MapPin, Calendar } from "lucide-react";
 import { useState } from "react";
+import StatsBar from "@/components/StatsBar";
 
 /* ── DATA ──────────────────────────────────────────────────────────────────── */
 
@@ -215,25 +216,7 @@ export default function LiveShows() {
       </section>
 
       {/* ── STATS BAR ──────────────────────────────────────────────────────── */}
-      <section className="bg-gray-900 py-16">
-        <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-10 text-center">
-          {[
-            ["50+", "Shows Performed"],
-            ["20K+", "Live Audience"],
-            ["12", "Cities Toured"],
-            ["100+", "Hours On Stage"],
-          ].map(([stat, label]) => (
-            <div key={label}>
-              <p className="font-black text-5xl md:text-6xl text-amber-500 tracking-tight">
-                {stat}
-              </p>
-              <p className="mt-2 font-mono text-xs tracking-widest text-gray-400 uppercase">
-                {label}
-              </p>
-            </div>
-          ))}
-        </div>
-      </section>
+      <StatsBar />
 
       {/* ── CTA ────────────────────────────────────────────────────────────── */}
       <section className="relative overflow-hidden py-24 bg-gray-50 border-t border-gray-200">

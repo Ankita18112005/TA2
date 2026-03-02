@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { ArrowDownRight, Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import StatsBar from "@/components/StatsBar";
 
 const tracks = [
   { title: "Midnight Echoes", genre: "Ambient", duration: "3:42", year: "2024" },
@@ -188,23 +189,7 @@ export default function Home() {
       </section>
 
       {/* ═══════════ STATS ═══════════ */}
-      <section className="bg-amber-500 py-20 px-6">
-        <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-12 text-center text-white">
-          {[
-            ["50+", "Projects"],
-            ["100+", "Clients"],
-            ["10+", "Years"],
-            ["30+", "Members"],
-          ].map(([n, l]) => (
-            <div key={l}>
-              <p className="text-6xl font-black">{n}</p>
-              <p className="text-sm uppercase tracking-[0.3em] mt-2 text-white/70">
-                {l}
-              </p>
-            </div>
-          ))}
-        </div>
-      </section>
+      <StatsBar />
 
       {/* ═══════════ MEET THE TEAM ═══════════ */}
       <section className="relative overflow-hidden py-24 bg-white">
