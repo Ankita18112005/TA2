@@ -4,4 +4,12 @@
 *.avi binary
 *.mkv binary
 *.jpg binary
-*.jpeg binary 
+*.jpeg binary
+*.JPG binary
+*.JPEG binary
+*.png binary
+*.PNG binary
+*.gif binary
+*.webp binary
+*.svg binary
+*.ico binary 
