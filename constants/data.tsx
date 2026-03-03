@@ -51,38 +51,7 @@ export const MEMBERS = [
         image: "images/team/hrickbw.jpg",
         desc: "Innovative producer fusing world music traditions with cutting-edge electronic sounds.",
     },
-    {
-        name: "AYAN MUKHERJEE",
-        role: "Lead Composer & Producer",
-        location: "NEW DELHI, INDIA",
-        skills: ["/ COMPOSITION", "/ PRODUCTION", "/ ARRANGEMENT"],
-        image: "images/team/ayancol.jpg",
-        desc: "10+ years shaping the sonic identity of artists, brands and film projects across genres.",
-    },
-    {
-        name: "PAPIA GUPTA",
-        role: "Vocalist & Songwriter",
-        location: "MUMBAI, INDIA",
-        skills: ["/ VOCALS", "/ SONGWRITING", "/ PERFORMANCE"],
-        image: "images/team/papiacol.jpg",
-        desc: "An award-winning vocalist bringing emotion and depth to every song she touches.",
-    },
-    {
-        name: "SARTHAK GHOSH",
-        role: "Sound Engineer",
-        location: "BANGALORE, INDIA",
-        skills: ["/ MIXING", "/ MASTERING", "/ SOUND DESIGN"],
-        image: "images/team/sarthakcol.jpg",
-        desc: "Studio-grade engineer ensuring pristine audio across every medium.",
-    },
-    {
-        name: "HRICK SENGUPTA",
-        role: "Music Producer",
-        location: "KOLKATA, INDIA",
-        skills: ["/ PRODUCTION", "/ BEATS", "/ COLLABORATION"],
-        image: "images/team/hrickcol.jpg",
-        desc: "Innovative producer fusing world music traditions with cutting-edge electronic sounds.",
-    },
+   
 ];
 
 // ── Portfolio: Projects ─────────────────────────────────────────────────

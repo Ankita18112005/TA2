@@ -25,7 +25,7 @@ export default function ContactInfo() {
                     </a>
                 </div>
 
-                <div className="flex flex-wrap justify-center gap-5">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5">
                     {SOCIALS.map((s) => (
                         <a
                             key={s.label}
@@ -33,7 +33,7 @@ export default function ContactInfo() {
                             target="_blank"
                             rel="noopener noreferrer"
                             aria-label={s.label}
-                            className="group flex items-center gap-4 bg-white border border-gray-200 px-6 py-4 hover:border-amber-500 hover:bg-amber-50 transition"
+                            className="group flex items-center gap-4 bg-white border border-gray-200 px-6 py-4 hover:border-amber-500 hover:bg-amber-50 transition w-full"
                         >
                             <span className="w-10 h-10 rounded-full bg-gray-100 group-hover:bg-amber-500 flex items-center justify-center text-gray-500 group-hover:text-white transition">
                                 {s.icon}

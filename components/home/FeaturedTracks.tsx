@@ -1,8 +1,14 @@
+"use client";
+
 import { Play } from "lucide-react";
+import { useState } from "react";
 import { TRACKS } from "@/constants/data";
 import GridBg from "@/components/shared/GridBg";
+import TrackModal from "@/components/home/TrackModal";
 
 export default function FeaturedTracks() {
+    const [selectedTrack, setSelectedTrack] = useState<(typeof TRACKS)[number] | null>(null);
+
     return (
         <section className="relative overflow-hidden py-24 bg-gray-50 border-t border-gray-200">
             <GridBg />
@@ -17,12 +23,10 @@ export default function FeaturedTracks() {
                 </h2>
                 <div className="divide-y divide-gray-200">
                     {TRACKS.map((t, i) => (
-                        <a
+                        <button
                             key={i}
-                            href={t.url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center justify-between py-6 group cursor-pointer"
+                            onClick={() => setSelectedTrack(t)}
+                            className="flex items-center justify-between py-6 group cursor-pointer w-full text-left"
                         >
                             <div className="flex items-center gap-6">
                                 <span className="text-gray-300 font-mono text-sm w-6">
@@ -46,10 +50,16 @@ export default function FeaturedTracks() {
                                 </span>
                                 <span className="text-gray-300 text-sm">{t.year}</span>
                             </div>
-                        </a>
+                        </button>
                     ))}
                 </div>
             </div>
+
+            <TrackModal
+                isOpen={!!selectedTrack}
+                onClose={() => setSelectedTrack(null)}
+                track={selectedTrack}
+            />
         </section>
     );
 }

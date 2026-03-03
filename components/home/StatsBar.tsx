@@ -5,7 +5,8 @@ import Counter from "@/components/ui/Counter";
 
 const stats = [
     { value: 6, suffix: "+", label: "Projects", places: [1] },
-    { value: 2, suffix: "+", label: "Years", places: [1] },
+    { value: 50, suffix: "+", label: "Live Shows", places: [10, 1] },
+    { value: 15, suffix: "+", label: "Collaborations", places: [10, 1] },
     { value: 4, suffix: "", label: "Members", places: [1] },
 ];
 
@@ -31,7 +32,7 @@ export default function StatsBar() {
 
     return (
         <section ref={ref} className="bg-amber-500 py-20 px-6">
-            <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-12 text-center text-white">
+            <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-12 text-center text-white">
                 {stats.map((item) => (
                     <div key={item.label}>
                         <div className="flex items-center justify-center">
