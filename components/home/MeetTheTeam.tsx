@@ -21,17 +21,17 @@ export default function MeetTheTeam() {
 
                 {/* Lead member preview */}
                 <div className="flex flex-col lg:flex-row gap-6 pt-8 items-start">
-                    <div className="bg-gray-100 p-10 w-full lg:max-w-sm shrink-0 h-fit">
+                    <div className="bg-gray-100 p-10 w-full lg:max-w-xs shrink-0 h-fit">
                         <div className="font-semibold text-xl space-y-2 text-gray-900">
                             <div>/ COMPOSITION</div>
                             <div>/ PRODUCTION</div>
                             <div>/ ARRANGEMENT</div>
                         </div>
                     </div>
-                    <div className="relative flex bg-gray-100 overflow-hidden w-full lg:max-w-sm">
+                    <div className="relative flex bg-gray-100 overflow-hidden w-full lg:max-w-xl">
                         <img
-                            src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=600&auto=format&fit=crop&q=80"
-                            alt="Ayan Kumar"
+                            src="/images/home/teamayan.jpg"
+                            alt="Team Ayan"
                             className="w-full object-cover grayscale"
                             style={{ height: 320 }}
                         />
@@ -42,7 +42,7 @@ export default function MeetTheTeam() {
                     <div className="flex flex-col justify-between flex-1">
                         <div>
                             <h3 className="font-black tracking-[-3px] text-5xl text-gray-900 mb-2">
-                                AYAN KUMAR
+                                TEAM AYAN
                             </h3>
                             <p className="text-xl font-thin tracking-[4px] uppercase text-gray-400">
                                 Lead Composer

@@ -388,7 +388,7 @@ export const Component = () => {
       <div className="border-t border-gray-800 max-w-7xl mx-auto">
         <div className="px-10 py-6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs tracking-wider uppercase">
           <p>&copy; {new Date().getFullYear()} Team Ayan. All rights reserved.</p>
-          <p className="text-gray-600">Crafted with passion &amp; precision.</p>
+          <p className="text-gray-600">Designed and Developed by <span className="text-amber-500 font-bold">TEAM PAROT</span>.</p>
         </div>
       </div>
 

@@ -20,8 +20,11 @@ export default function StatsBar() {
         const observer = new IntersectionObserver(
             ([entry]) => {
                 if (entry.isIntersecting) {
-                    setVisible(true);
-                    observer.disconnect();
+                    setVisible(false);
+                    // brief reset to 0, then animate up
+                    requestAnimationFrame(() => setVisible(true));
+                } else {
+                    setVisible(false);
                 }
             },
             { threshold: 0.3 }

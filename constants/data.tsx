@@ -121,7 +121,7 @@ export const SHOWS = [
         date: "15 Dec 2025",
         venue: "Science City Auditorium, Kolkata",
         thumbnail: "/images/live/show1.jpg",
-        videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+        videoUrl: "/video/live/1stsong.mp4",
         description:
             "An electrifying night of original compositions performed live for a 2,000-strong crowd under the Kolkata skyline.",
     },
@@ -130,7 +130,7 @@ export const SHOWS = [
         date: "22 Oct 2025",
         venue: "The Piano Man Jazz Club, New Delhi",
         thumbnail: "/images/live/show2.jpg",
-        videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+        videoUrl: "/video/live/2ndsong.mp4",
         description:
             "An intimate evening blending jazz-fusion and cinematic soundscapes for a packed house of music lovers.",
     },
@@ -139,7 +139,7 @@ export const SHOWS = [
         date: "08 Aug 2025",
         venue: "Blue Frog, Mumbai",
         thumbnail: "/images/live/show3.jpg",
-        videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+        videoUrl: "/video/live/3rdsong.mp4",
         description:
             "A collaborative live session featuring guest artists and spontaneous improvisations.",
     },
@@ -147,12 +147,14 @@ export const SHOWS = [
 
 // ── Live Shows: Gallery ─────────────────────────────────────────────────
 export const GALLERY = [
-    { src: "/images/live/gallery1.jpg", alt: "Live performance wide shot" },
-    { src: "/images/live/gallery2.jpg", alt: "Crowd energy" },
-    { src: "/images/live/gallery3.jpg", alt: "Backstage moments" },
-    { src: "/images/live/gallery4.jpg", alt: "On-stage close-up" },
-    { src: "/images/live/gallery5.jpg", alt: "Sound check" },
-    { src: "/images/live/gallery6.jpg", alt: "Band together" },
-    { src: "/images/live/gallery7.jpg", alt: "Encore moment" },
-    { src: "/images/live/gallery8.jpg", alt: "Fans and the stage" },
+    { src: "/images/gallery/gal1.jpg", alt: "Live performance wide shot" },
+    { src: "/images/gallery/gal2.jpg", alt: "Crowd energy" },
+    { src: "/images/gallery/gal3.jpg", alt: "Backstage moments" },
+    { src: "/images/gallery/gal4.jpg", alt: "On-stage close-up" },
+    { src: "/images/gallery/gal5.jpg", alt: "Sound check" },
+    { src: "/images/gallery/gal6.jpg", alt: "Band together" },
+    { src: "/images/gallery/gal7.jpg", alt: "Encore moment" },
+    { src: "/images/gallery/gal8.jpg", alt: "Fans and the stage" },
+    { src: "/images/gallery/gal9.jpg", alt: "Behind the scenes" },
+    { src: "/images/gallery/gal10.jpg", alt: "Band performing" },
 ];
