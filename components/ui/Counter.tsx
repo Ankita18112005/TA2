@@ -53,8 +53,19 @@ interface DigitProps {
 }
 
 function Digit({ place, value, height, digitStyle }: DigitProps) {
+  const isDecimal = place === '.';
+  const numericPlace = isDecimal ? 1 : place;
+  const valueRoundedToPlace = getValueRoundedToPlace(value, numericPlace);
+  const animatedValue = useSpring(valueRoundedToPlace);
+
+  useEffect(() => {
+    if (!isDecimal) {
+      animatedValue.set(valueRoundedToPlace);
+    }
+  }, [animatedValue, valueRoundedToPlace, isDecimal]);
+
   // Decimal point digit
-  if (place === '.') {
+  if (isDecimal) {
     return (
       <span
         className="relative inline-flex items-center justify-center"
@@ -66,13 +77,6 @@ function Digit({ place, value, height, digitStyle }: DigitProps) {
   }
 
   // Numeric digit
-  const valueRoundedToPlace = getValueRoundedToPlace(value, place);
-  const animatedValue = useSpring(valueRoundedToPlace);
-
-  useEffect(() => {
-    animatedValue.set(valueRoundedToPlace);
-  }, [animatedValue, valueRoundedToPlace]);
-
   const defaultStyle: React.CSSProperties = {
     height,
     position: 'relative',

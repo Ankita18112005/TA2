@@ -4,6 +4,17 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Gallery: grayscale only on md+ screens */
+@media (min-width: 768px) {
+  .gallery-img {
+    filter: grayscale(100%);
+    transition: filter 0.5s, transform 0.5s;
+  }
+  .group:hover .gallery-img {
+    filter: grayscale(0%);
+  }
+}
+
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 body { font-family: 'Inter', sans-serif; background: #fff; color: #111; }

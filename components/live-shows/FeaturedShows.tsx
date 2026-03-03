@@ -42,7 +42,7 @@ export default function FeaturedShows() {
                                         <img
                                             src={show.thumbnail}
                                             alt={show.title}
-                                            className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500"
+                                            className="w-full h-full object-cover transition duration-500"
                                         />
                                         <button
                                             onClick={() => setActiveVideo(i)}

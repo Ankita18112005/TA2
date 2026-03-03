@@ -25,13 +25,13 @@ function GalleryImage({
             <img
                 src={photo.src}
                 alt={photo.alt}
-                className="w-full h-full object-cover aspect-square grayscale group-hover:grayscale-0 group-hover:scale-105 transition duration-500"
+                className="w-full h-full object-cover aspect-square gallery-img group-hover:scale-105 transition duration-500"
             />
             <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-500" />
             <p className="absolute bottom-0 left-0 right-0 p-3 text-white text-xs font-mono tracking-wider uppercase opacity-0 group-hover:opacity-100 transition duration-300">
                 {photo.alt}
             </p>
-        </div>
+        </div>  
     );
 }
 
