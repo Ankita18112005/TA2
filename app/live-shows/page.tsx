@@ -2,7 +2,7 @@ import LiveShowsHero from "@/components/live-shows/LiveShowsHero";
 import FeaturedShows from "@/components/live-shows/FeaturedShows";
 import PhotoGallery from "@/components/live-shows/PhotoGallery";
 import StatsBar from "@/components/home/StatsBar";
-import LiveShowsCta from "@/components/live-shows/LiveShowsCta";
+import ContactInfo from "@/components/home/ContactInfo";
 
 export default function LiveShows() {
     return (
@@ -11,7 +11,7 @@ export default function LiveShows() {
             <FeaturedShows />
             <PhotoGallery />
             <StatsBar />
-            <LiveShowsCta />
+            <ContactInfo />
         </div>
     );
 }

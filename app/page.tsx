@@ -2,7 +2,8 @@ import HeroSection from "@/components/home/HeroSection";
 import FeaturedTracks from "@/components/home/FeaturedTracks";
 import StatsBar from "@/components/home/StatsBar";
 import MeetTheTeam from "@/components/home/MeetTheTeam";
-import CtaSection from "@/components/home/CtaSection";
+import LiveShowsBanner from "@/components/team/LiveShowsBanner";
+import ContactInfo from "@/components/home/ContactInfo";
 
 export default function Home() {
   return (
@@ -11,7 +12,8 @@ export default function Home() {
       <FeaturedTracks />
       <StatsBar />
       <MeetTheTeam />
-      <CtaSection />
+      <LiveShowsBanner />
+      <ContactInfo />
     </div>
   );
 }

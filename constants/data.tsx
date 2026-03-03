@@ -5,10 +5,8 @@
 // ── Navigation ──────────────────────────────────────────────────────────
 export const NAV_LINKS = [
     { href: "/", label: "Home" },
-    { href: "/portfolio", label: "Portfolio" },
     { href: "/team", label: "Our Team" },
     { href: "/live-shows", label: "Live Shows" },
-    { href: "/contact", label: "Contact" },
 ];
 
 // ── Home: Featured Tracks ───────────────────────────────────────────────

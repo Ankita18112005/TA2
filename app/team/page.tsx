@@ -1,8 +1,8 @@
 import TeamHero from "@/components/team/TeamHero";
 import TeamMembers from "@/components/team/TeamMembers";
 import LiveShowsBanner from "@/components/team/LiveShowsBanner";
-import ValuesSection from "@/components/team/ValuesSection";
-import TeamCta from "@/components/team/TeamCta";
+// import ValuesSection from "@/components/team/ValuesSection";
+import ContactInfo from "@/components/home/ContactInfo";
 
 export default function Team() {
   return (
@@ -10,8 +10,8 @@ export default function Team() {
       <TeamHero />
       <TeamMembers />
       <LiveShowsBanner />
-      <ValuesSection />
-      <TeamCta />
+      {/* <ValuesSection /> */}
+      <ContactInfo />
     </div>
   );
 }
