@@ -6,6 +6,9 @@ import Footer from '@/components/layout/Footer';
 export const metadata: Metadata = {
   title: 'Team Ayan | Music Portfolio',
   description: 'Composers, producers and performers crafting original music.',
+  icons: {
+    icon: '/icon.svg',
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
