@@ -25,7 +25,13 @@ export const MEMBERS = [
         location: "NEW DELHI, INDIA",
         skills: ["/ COMPOSITION", "/ PRODUCTION", "/ ARRANGEMENT"],
         image: "images/team/ayanbw.jpg",
-        desc: "10+ years shaping the sonic identity of artists, brands and film projects across genres.",
+        desc: "5+ years shaping the sonic identity of artists, brands and film projects across genres.",
+        musicLinks: [
+            { title: "Sraboner Sesh Baridhara", url: "https://youtu.be/6qBDc4Udo9Q" },
+            { title: "Ichhera Jaak Ure", url: "https://youtu.be/vfLLQYluR6c" },
+            { title: "Tomake Chuye Dilam", url: "https://youtu.be/mMZLM38ePJY" },
+            { title: "Ae Mere Pyare Watan", url: "https://youtu.be/hQu0HzZj8vY" },
+        ],
     },
     {
         name: "PAPIA GUPTA",
@@ -34,6 +40,10 @@ export const MEMBERS = [
         skills: ["/ VOCALS", "/ SONGWRITING", "/ PERFORMANCE"],
         image: "images/team/papiacol.jpg",
         desc: "An award-winning vocalist bringing emotion and depth to every song she touches.",
+        musicLinks: [
+            { title: "Sraboner Sesh Baridhara", url: "https://youtu.be/6qBDc4Udo9Q" },
+            { title: "Ichhera Jaak Ure", url: "https://youtu.be/vfLLQYluR6c" },
+        ],
     },
     {
         name: "SARTHAK GHOSH",
@@ -42,14 +52,25 @@ export const MEMBERS = [
         skills: ["/ MIXING", "/ MASTERING", "/ SOUND DESIGN"],
         image: "images/team/sarthakbw.jpg",
         desc: "Studio-grade engineer ensuring pristine audio across every medium.",
+        musicLinks: [
+            { title: "Ichhera Jaak Ure", url: "https://youtu.be/vfLLQYluR6c" },
+            { title: "Sraboner Sesh Baridhara", url: "https://youtu.be/6qBDc4Udo9Q" },
+            { title: "Bou Katha", url: "https://youtu.be/VIsw5ncZeTg" },
+            { title: "Nadir Shabda", url: "https://youtu.be/0NOSSaDbOOU" },
+        ],
     },
     {
         name: "HRICK SENGUPTA",
-        role: "Music Producer",
+        role: "Mix Engineer",
         location: "KOLKATA, INDIA",
         skills: ["/ PRODUCTION", "/ BEATS", "/ COLLABORATION"],
         image: "images/team/hrickbw.jpg",
         desc: "Innovative producer fusing world music traditions with cutting-edge electronic sounds.",
+        musicLinks: [
+            { title: "Sraboner Sesh Baridhara", url: "https://youtu.be/6qBDc4Udo9Q" },
+            { title: "Ichhera Jaak Ure", url: "https://youtu.be/vfLLQYluR6c" },
+            { title: "Sapnon Se Bhare Naina", url: "https://youtu.be/rNuj_ZdF1Fk" },
+        ],
     },
    
 ];

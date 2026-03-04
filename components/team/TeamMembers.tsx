@@ -46,11 +46,37 @@ export default function TeamMembers() {
                                 </div>
                             </div>
 
-                            {/* Bio */}
+                            {/* Bio + Music Links */}
                             <div className="flex flex-col justify-end flex-1 pb-4">
                                 <p className="font-mono text-sm tracking-wide text-gray-500 uppercase leading-relaxed">
                                     {m.desc}
                                 </p>
+
+                                {m.musicLinks && m.musicLinks.length > 0 && (
+                                    <div className="mt-6">
+                                        <p className="text-[10px] uppercase tracking-[0.3em] text-gray-400 font-semibold mb-3">
+                                            Featured Work
+                                        </p>
+                                        <div className="flex flex-col gap-2">
+                                            {m.musicLinks.map((link: { title: string; url: string }) => (
+                                                <a
+                                                    key={link.url}
+                                                    href={link.url}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="flex items-center gap-2 px-3 py-2 bg-gray-100 hover:bg-amber-50 border border-gray-200 hover:border-amber-300 rounded transition-all group w-fit"
+                                                >
+                                                    <svg className="size-3.5 text-gray-400 group-hover:text-red-500 transition-colors shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                                                        <path d="M23.5 6.19a3.02 3.02 0 0 0-2.12-2.14C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.38.55A3.02 3.02 0 0 0 .5 6.19 31.6 31.6 0 0 0 0 12a31.6 31.6 0 0 0 .5 5.81 3.02 3.02 0 0 0 2.12 2.14c1.88.55 9.38.55 9.38.55s7.5 0 9.38-.55a3.02 3.02 0 0 0 2.12-2.14A31.6 31.6 0 0 0 24 12a31.6 31.6 0 0 0-.5-5.81ZM9.75 15.02V8.98L15.5 12l-5.75 3.02Z" />
+                                                    </svg>
+                                                    <span className="text-xs font-medium tracking-wide text-gray-600 group-hover:text-gray-900">
+                                                        {link.title}
+                                                    </span>
+                                                </a>
+                                            ))}
+                                        </div>
+                                    </div>
+                                )}
                             </div>
                         </div>
                     </div>

@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: 'Team Ayan | Music Portfolio',
   description: 'Composers, producers and performers crafting original music.',
   icons: {
-    icon: '/image/icon/favicon.ico',
+    icon: '/images/icon/favicon.ico',
   },
 };
 
