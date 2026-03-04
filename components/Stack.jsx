@@ -39,6 +39,19 @@ function CardRotate({ children, onSendToBack, sensitivity, disableDrag = false }
   );
 }
 
+/**
+ * @param {Object} props
+ * @param {boolean} [props.randomRotation]
+ * @param {number} [props.sensitivity]
+ * @param {React.ReactNode[]} [props.cards]
+ * @param {{ stiffness: number, damping: number }} [props.animationConfig]
+ * @param {boolean} [props.sendToBackOnClick]
+ * @param {boolean} [props.autoplay]
+ * @param {number} [props.autoplayDelay]
+ * @param {boolean} [props.pauseOnHover]
+ * @param {boolean} [props.mobileClickOnly]
+ * @param {number} [props.mobileBreakpoint]
+ */
 export default function Stack({
   randomRotation = false,
   sensitivity = 200,
