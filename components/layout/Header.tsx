@@ -28,13 +28,33 @@ export default function Header() {
                     ))}
                 </nav>
 
-                <button className="md:hidden text-2xl text-gray-700" onClick={() => setOpen(!open)}>
-                    {open ? '✕' : '☰'}
+                {/* Animated Hamburger Button */}
+                <button
+                    className="md:hidden relative w-7 h-5 flex flex-col justify-between items-center group"
+                    onClick={() => setOpen(!open)}
+                    aria-label="Toggle menu"
+                >
+                    <span
+                        className={`block w-full h-[2.5px] bg-gray-700 rounded-full transition-all duration-300 ease-in-out origin-center ${open ? 'rotate-45 translate-y-[9px]' : ''
+                            }`}
+                    />
+                    <span
+                        className={`block w-full h-[2.5px] bg-gray-700 rounded-full transition-all duration-300 ease-in-out ${open ? 'opacity-0 scale-x-0' : 'opacity-100 scale-x-100'
+                            }`}
+                    />
+                    <span
+                        className={`block w-full h-[2.5px] bg-gray-700 rounded-full transition-all duration-300 ease-in-out origin-center ${open ? '-rotate-45 -translate-y-[9px]' : ''
+                            }`}
+                    />
                 </button>
             </div>
 
-            {open && (
-                <div className="md:hidden border-t border-gray-100 px-6 pb-5 flex flex-col gap-4 pt-4 text-sm uppercase tracking-wide text-gray-600">
+            {/* Mobile Dropdown with slide animation */}
+            <div
+                className={`md:hidden border-t border-gray-100 overflow-hidden transition-all duration-300 ease-in-out ${open ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                    }`}
+            >
+                <div className="px-6 pb-5 flex flex-col gap-4 pt-4 text-sm uppercase tracking-wide text-gray-600">
                     {NAV_LINKS.map(l => (
                         <Link
                             key={l.href}
@@ -46,7 +66,7 @@ export default function Header() {
                         </Link>
                     ))}
                 </div>
-            )}
+            </div>
         </header>
     );
 }

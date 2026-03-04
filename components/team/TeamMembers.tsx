@@ -18,24 +18,23 @@ export default function TeamMembers() {
                                 {m.name}
                             </h2>
                             <p
-                                className={`text-2xl font-thin tracking-[6px] uppercase text-gray-400 absolute -bottom-8 ${i % 2 === 0 ? "right-0 hidden md:block" : "left-0"
-                                    }`}
+                                className="text-lg md:text-2xl font-thin tracking-[4px] md:tracking-[6px] uppercase text-gray-400 mt-2 md:mt-0 md:absolute md:-bottom-8 md:left-0"
                             >
                                 {m.role}
                             </p>
                         </div>
 
                         {/* Card + Photo row */}
-                        <div className={`flex gap-6 pt-16 items-start ${i % 2 !== 0 ? "flex-row-reverse" : ""}`}>
+                        <div className={`flex flex-col md:flex-row gap-6 pt-16 items-start ${i % 2 !== 0 ? "md:flex-row-reverse" : ""}`}>
                             {/* Skills card */}
-                            <div className="bg-gray-100 p-10 w-full max-w-sm shrink-0 h-fit">
+                            <div className="bg-gray-100 p-6 md:p-10 w-full md:max-w-sm shrink-0 h-fit">
                                 <div className="font-semibold text-xl space-y-2 text-gray-900">
                                     {m.skills.map(s => <div key={s}>{s}</div>)}
                                 </div>
                             </div>
 
                             {/* Photo */}
-                            <div className="relative flex bg-gray-100 overflow-hidden flex-1 max-w-sm">
+                            <div className="relative flex bg-gray-100 overflow-hidden w-full md:flex-1 md:max-w-sm">
                                 <img
                                     src={m.image}
                                     alt={m.name}
@@ -48,7 +47,7 @@ export default function TeamMembers() {
                             </div>
 
                             {/* Bio */}
-                            <div className="hidden lg:flex flex-col justify-end flex-1 pb-4">
+                            <div className="flex flex-col justify-end flex-1 pb-4">
                                 <p className="font-mono text-sm tracking-wide text-gray-500 uppercase leading-relaxed">
                                     {m.desc}
                                 </p>

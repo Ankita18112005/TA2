@@ -1,7 +1,10 @@
+"use client";
+
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import GridBg from "@/components/shared/GridBg";
+import Stack from "@/components/Stack";
 
 export default function HeroSection() {
     return (
@@ -10,16 +13,13 @@ export default function HeroSection() {
             <div className="mx-auto max-w-7xl relative z-20 px-6">
                 {/* Headline */}
                 <div className="relative">
-                    <p className="text-sm absolute -top-4 left-20 font-medium tracking-wider text-gray-400">
+                    <p className="text-sm absolute -top-4 left-2 md:left-20 font-medium tracking-wider text-gray-400">
                         EST. 2014
                     </p>
-                    <h1 className="z-20 relative font-black text-gray-900 text-center tracking-[-7px] text-7xl md:text-9xl xl:tracking-[-1rem] md:tracking-[-14px] xl:text-[10rem]">
+                    <h1 className="z-20 relative font-black text-gray-900 text-left md:text-center tracking-[-7px] text-7xl md:text-9xl xl:tracking-[-1rem] md:tracking-[-14px] xl:text-[10rem]">
                         CREATIVE MUSIC
                     </h1>
-                    <p className="text-4xl hidden xl:block absolute -bottom-12 right-24 font-thin tracking-[6px] text-gray-400">
-                        TEAM AYAN
-                    </p>
-                    <p className="text-4xl absolute xl:hidden -bottom-12 left-24 font-thin tracking-[6px] text-gray-400">
+                    <p className="text-2xl md:text-4xl xl:absolute xl:-bottom-12 xl:right-24 mt-2 xl:mt-0 font-thin tracking-[4px] md:tracking-[6px] text-gray-400">
                         TEAM AYAN
                     </p>
                 </div>
@@ -77,28 +77,30 @@ export default function HeroSection() {
 
                 {/* Recent Work strip */}
                 <div className="md:flex mt-20 items-end justify-between">
-                    <div className="relative h-48 w-72 mb-8 md:mb-0">
-                        <div className="w-60 h-36 shadow-lg border rounded-md overflow-hidden absolute bottom-0 left-0">
-                            <img
-                                src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=400&auto=format&fit=crop&q=80"
-                                alt="Studio"
-                                className="w-full h-full object-cover"
-                            />
-                        </div>
-                        <div className="w-60 h-36 shadow-lg border rounded-md overflow-hidden absolute bottom-3 left-3">
-                            <img
-                                src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=400&auto=format&fit=crop&q=80"
-                                alt="Performance"
-                                className="w-full h-full object-cover"
-                            />
-                        </div>
-                        <div className="w-60 h-36 shadow-lg border rounded-md overflow-hidden absolute bottom-6 left-6">
-                            <img
-                                src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&auto=format&fit=crop&q=80"
-                                alt="Concert"
-                                className="w-full h-full object-cover"
-                            />
-                        </div>
+                    <div className="w-96 h-72 mb-8 md:mb-0 -ml-4 md:ml-0">
+                        <Stack
+                            randomRotation={false}
+                            sensitivity={200}
+                            sendToBackOnClick={true}
+                            cards={[
+                                "/images/home/teamayan.jpg",
+                                "/images/team/sarthakbw.jpg",
+                                "/images/live/show2.jpg",
+                                "/images/live/show3.jpg",
+                                "/images/gallery/gal10.jpg",
+                                "/images/gallery/gal6.jpg",
+                            ].map((src, i) => (
+                                <img
+                                    key={i}
+                                    src={src}
+                                    alt={`recent-work-${i + 1}`}
+                                    style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                                />
+                            ))}
+                            autoplay={true}
+                            autoplayDelay={3000}
+                            pauseOnHover={true}
+                        />
                     </div>
                     <div>
                         <div className="flex items-center md:justify-end gap-2 text-gray-500">
