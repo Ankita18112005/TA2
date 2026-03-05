@@ -8,7 +8,7 @@ export default function TeamMembers() {
             {MEMBERS.map((m, i) => (
                 <section
                     key={`${m.name}-${i}`}
-                    className={`relative overflow-hidden py-24 ${i % 2 === 0 ? "bg-white" : "bg-gray-50"}`}
+                    className={`relative overflow-hidden py-4 sm:py-16 ${i % 2 === 0 ? "bg-white" : "bg-gray-50"}`}
                 >
                     <GridBg />
                     <div className="relative z-10 max-w-7xl mx-auto px-6">
@@ -25,7 +25,7 @@ export default function TeamMembers() {
                         </div>
 
                         {/* Card + Photo row */}
-                        <div className={`flex flex-col md:flex-row gap-6 pt-16 items-start ${i % 2 !== 0 ? "md:flex-row-reverse" : ""}`}>
+                        <div className={`flex flex-col md:flex-row gap-6 pt-8 items-start ${i % 2 !== 0 ? "md:flex-row-reverse" : ""}`}>
                             {/* Skills card */}
                             <div className="bg-gray-100 p-6 md:p-10 w-full md:max-w-sm shrink-0 h-fit">
                                 <div className="font-semibold text-xl space-y-2 text-gray-900">

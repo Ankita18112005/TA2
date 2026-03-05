@@ -323,6 +323,7 @@ export type SiteConfig = typeof siteConfig;
 
 export const Component = () => {
   const tablet = useMediaQuery("(max-width: 1024px)");
+  const mobile = useMediaQuery("(max-width: 640px)");
 
   return (
     <footer id="footer" className="w-full pb-0 bg-gray-900 text-gray-400">
@@ -423,8 +424,8 @@ export const Component = () => {
         <div className="absolute inset-0 bg-gradient-to-t from-transparent to-gray-900 z-10 from-40%" />
         <div className="absolute inset-0 mx-6">
           <FlickeringGrid
-            text={tablet ? "AM" : "AMUSICALS"}
-            fontSize={tablet ? 70 : 90}
+            text="AMUSICALS"
+            fontSize={mobile ? 36 : tablet ? 60 : 90}
             fontWeight={900}
             className="h-full w-full"
             squareSize={2}

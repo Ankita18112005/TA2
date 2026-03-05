@@ -10,7 +10,7 @@ export default function FeaturedTracks() {
     const [selectedTrack, setSelectedTrack] = useState<(typeof TRACKS)[number] | null>(null);
 
     return (
-        <section className="relative overflow-hidden py-24 bg-gray-50 border-t border-gray-200">
+        <section className="relative overflow-hidden py-16 bg-gray-50 border-t border-gray-200">
             <GridBg />
             <div className="relative z-10 max-w-7xl mx-auto px-6">
                 <p className="text-amber-500 uppercase tracking-[0.3em] text-xs mb-2 font-semibold">

@@ -4,7 +4,7 @@ import GridBg from "@/components/shared/GridBg";
 
 export default function LiveShowsHero() {
     return (
-        <section className="min-h-[50vh] relative overflow-hidden flex flex-col justify-center py-20">
+        <section className="min-h-screen relative overflow-hidden flex flex-col justify-center py-20">
             <GridBg />
             <div className="relative z-10 max-w-7xl mx-auto px-6 w-full">
                 <Link

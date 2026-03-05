@@ -39,7 +39,7 @@ export default function PhotoGallery() {
     const sets = chunk(GALLERY, 5);
 
     return (
-        <section className="relative overflow-hidden py-24 bg-white">
+        <section className="relative overflow-hidden py-16 bg-white">
             <GridBg />
             <div className="relative z-10 max-w-7xl mx-auto px-6">
                 <p className="text-sm font-medium tracking-[0.3em] text-amber-500 uppercase mb-2">

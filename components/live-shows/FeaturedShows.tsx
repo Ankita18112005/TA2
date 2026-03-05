@@ -10,7 +10,7 @@ export default function FeaturedShows() {
     const [activeVideo, setActiveVideo] = useState<number | null>(null);
 
     return (
-        <section className="relative overflow-hidden py-24 bg-gray-50">
+        <section className="relative overflow-hidden py-16 bg-gray-50">
             <GridBg />
             <div className="relative z-10 max-w-7xl mx-auto px-6">
                 <p className="text-sm font-medium tracking-[0.3em] text-amber-500 uppercase mb-2">
