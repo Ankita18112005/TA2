@@ -13,13 +13,13 @@ export default function HeroSection() {
                 {/* Headline */}
                 <div className="relative">
                     <p className="text-sm absolute -top-4 left-2 md:left-20 font-medium tracking-wider text-gray-400">
-                        EST. 2014
+                        EST. 2026
                     </p>
                     <h1 className="z-20 relative font-black text-gray-900 text-left md:text-center tracking-[-4px] text-5xl sm:text-7xl md:text-9xl xl:tracking-[-1rem] sm:tracking-[-7px] md:tracking-[-14px] xl:text-[10rem]">
-                        CREATIVE MUSIC
-                    </h1>
-                    <p className="text-xl sm:text-2xl md:text-4xl xl:absolute xl:-bottom-12 xl:right-24 mt-2 xl:mt-0 font-thin tracking-[4px] md:tracking-[6px] text-gray-400">
                         <span className="text-amber-500">A</span>MUSICALS
+                    </h1>
+                    <p className="text-xl sm:text-2xl md:text-4xl xl:absolute xl:-bottom-12 xl:left-48 z-30 mt-2 xl:mt-0 font-thin tracking-[4px] md:tracking-[6px] text-gray-400">
+                        <span className="text-amber-500">CREATIVE </span>MUSIC
                     </p>
                 </div>
 
@@ -38,19 +38,17 @@ export default function HeroSection() {
                                     alt="Studio microphone"
                                     className="h-[350px] lg:h-[400px] w-full object-contain grayscale"
                                 />
-                                <div className="text-left p-2 rotate-180 [writing-mode:vertical-rl] text-xs font-medium tracking-widest text-gray-500">
-                                    BASED IN NEW DELHI
-                                </div>
+                                
                             </div>
                         </div>
                     </div>
-                    <div className="flex md:hidden left-1/2 -top-10 w-full md:w-fit overflow-hidden bg-gray-100 -mt-4">
+                    <div className="flex md:hidden w-full overflow-hidden bg-gray-100 -mt-4">
                         <img
                             src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=600&auto=format&fit=crop&q=80"
                             alt="Studio microphone"
-                            className="h-[300px] sm:h-[400px] w-full object-contain grayscale"
+                            className="h-[300px] sm:h-[400px] flex-1 min-w-0 object-contain grayscale"
                         />
-                        <div className="text-left p-2 rotate-180 [writing-mode:vertical-rl] text-xs font-medium tracking-widest text-gray-500">
+                        <div className="text-left p-2 rotate-180 [writing-mode:vertical-rl] text-xs font-medium tracking-widest text-gray-500 shrink-0">
                             BASED IN NEW DELHI
                         </div>
                     </div>

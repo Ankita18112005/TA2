@@ -2,24 +2,38 @@
 'use client';
 
 import { motion, useMotionValue, useTransform } from 'framer-motion';
-import { useState, useEffect, type ReactNode } from 'react';
+import { useState, useEffect, useRef, type ReactNode } from 'react';
 
 interface CardRotateProps {
     children: ReactNode;
-    onSendToBack: () => void;
+    onSwipeLeft: () => void;
+    onSwipeRight: () => void;
     sensitivity: number;
     disableDrag?: boolean;
 }
 
-function CardRotate({ children, onSendToBack, sensitivity, disableDrag = false }: CardRotateProps) {
+function CardRotate({ children, onSwipeLeft, onSwipeRight, sensitivity, disableDrag = false }: CardRotateProps) {
     const x = useMotionValue(0);
     const y = useMotionValue(0);
     const rotateX = useTransform(y, [-100, 100], [60, -60]);
     const rotateY = useTransform(x, [-100, 100], [-60, 60]);
 
     function handleDragEnd(_: unknown, info: { offset: { x: number; y: number } }) {
-        if (Math.abs(info.offset.x) > sensitivity || Math.abs(info.offset.y) > sensitivity) {
-            onSendToBack();
+        const horizontalSwipe = Math.abs(info.offset.x) > sensitivity;
+        const verticalSwipe = Math.abs(info.offset.y) > sensitivity;
+
+        if (horizontalSwipe || verticalSwipe) {
+            if (Math.abs(info.offset.x) >= Math.abs(info.offset.y)) {
+                // Horizontal swipe dominates
+                if (info.offset.x < 0) {
+                    onSwipeLeft();  // swipe left → next
+                } else {
+                    onSwipeRight(); // swipe right → previous
+                }
+            } else {
+                // Vertical swipe — treat as next (same as old behavior)
+                onSwipeLeft();
+            }
         } else {
             x.set(0);
             y.set(0);
@@ -76,6 +90,8 @@ export default function Stack({
 }: StackProps) {
     const [isMobile, setIsMobile] = useState(false);
     const [isPaused, setIsPaused] = useState(false);
+    const containerRef = useRef<HTMLDivElement>(null);
+    const touchStartX = useRef<number | null>(null);
 
     useEffect(() => {
         const checkMobile = () => {
@@ -145,12 +161,24 @@ export default function Stack({
         }
     }, [cards]);
 
+    // Send top card to back (next photo)
     const sendToBack = (id: number) => {
         setStack((prev) => {
             const newStack = [...prev];
             const index = newStack.findIndex((card) => card.id === id);
             const [card] = newStack.splice(index, 1);
             newStack.unshift(card);
+            return newStack;
+        });
+    };
+
+    // Bring bottom card to top (previous photo)
+    const bringToFront = () => {
+        setStack((prev) => {
+            if (prev.length <= 1) return prev;
+            const newStack = [...prev];
+            const [bottomCard] = newStack.splice(0, 1);
+            newStack.push(bottomCard);
             return newStack;
         });
     };
@@ -166,8 +194,45 @@ export default function Stack({
         }
     }, [autoplay, autoplayDelay, stack, isPaused]);
 
+    // Touch swipe support for mobile when drag is disabled
+    useEffect(() => {
+        if (!shouldDisableDrag) return;
+        const el = containerRef.current;
+        if (!el) return;
+
+        const handleTouchStart = (e: TouchEvent) => {
+            touchStartX.current = e.touches[0].clientX;
+        };
+
+        const handleTouchEnd = (e: TouchEvent) => {
+            if (touchStartX.current === null) return;
+            const deltaX = e.changedTouches[0].clientX - touchStartX.current;
+            touchStartX.current = null;
+
+            if (Math.abs(deltaX) > 50) {
+                if (deltaX < 0) {
+                    // Swipe left → next
+                    const topCardId = stack[stack.length - 1].id;
+                    sendToBack(topCardId);
+                } else {
+                    // Swipe right → previous
+                    bringToFront();
+                }
+            }
+        };
+
+        el.addEventListener('touchstart', handleTouchStart, { passive: true });
+        el.addEventListener('touchend', handleTouchEnd, { passive: true });
+
+        return () => {
+            el.removeEventListener('touchstart', handleTouchStart);
+            el.removeEventListener('touchend', handleTouchEnd);
+        };
+    }, [shouldDisableDrag, stack]);
+
     return (
         <div
+            ref={containerRef}
             className="relative w-full h-full"
             style={{ perspective: 600 }}
             onMouseEnter={() => pauseOnHover && setIsPaused(true)}
@@ -178,7 +243,8 @@ export default function Stack({
                 return (
                     <CardRotate
                         key={card.id}
-                        onSendToBack={() => sendToBack(card.id)}
+                        onSwipeLeft={() => sendToBack(card.id)}
+                        onSwipeRight={() => bringToFront()}
                         sensitivity={sensitivity}
                         disableDrag={shouldDisableDrag}
                     >
