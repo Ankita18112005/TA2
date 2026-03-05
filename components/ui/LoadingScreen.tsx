@@ -199,7 +199,7 @@ export default function LoadingScreen() {
                         squareSize={isMobile ? 2 : 3}
                         gridGap={isMobile ? 2 : 3}
                         color="#F59E0B"
-                        maxOpacity={0.3}
+                        maxOpacity={0.2}
                         flickerChance={0.35}
                         text="AMUSICALS"
                         fontSize={isMobile ? 40 : 100}
