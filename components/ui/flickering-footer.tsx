@@ -428,10 +428,10 @@ export const Component = () => {
             fontSize={mobile ? 36 : tablet ? 60 : 90}
             fontWeight={900}
             className="h-full w-full"
-            squareSize={2}
-            gridGap={tablet ? 2 : 3}
-            color="#ffffff"
-            maxOpacity={0.5}
+            squareSize={mobile ? 1 : 2}
+            gridGap={mobile ? 1 : tablet ? 2 : 3}
+            color="text-amber-500"
+            maxOpacity={mobile ? 0.25 : 0.5}
             flickerChance={0.1}
           />
         </div>
