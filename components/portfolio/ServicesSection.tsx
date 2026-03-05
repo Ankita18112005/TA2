@@ -1,4 +1,4 @@
-import { SERVICES } from "@/constants/data";
+const SERVICES: string[] = [];
 
 export default function ServicesSection() {
     return (

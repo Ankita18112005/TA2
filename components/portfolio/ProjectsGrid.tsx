@@ -1,4 +1,4 @@
-import { PROJECTS } from "@/constants/data";
+const PROJECTS: any[] = [];
 
 export default function ProjectsGrid() {
     return (
