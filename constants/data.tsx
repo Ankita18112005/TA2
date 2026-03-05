@@ -9,6 +9,16 @@ export const NAV_LINKS = [
     { href: "/live-shows", label: "Live Shows" },
 ];
 
+// ── Home: Hero Stack Images ─────────────────────────────────────────────
+export const HERO_STACK_IMAGES = [
+    "/images/home/teamayan.jpg",
+    "/images/team/sarthakcol.jpg",
+    "/images/live/show2.jpg",
+    "/images/live/show3.jpg",
+    "/images/gallery/gal10.jpg",
+    "/images/gallery/gal6.jpg",
+];
+
 // ── Home: Featured Tracks ───────────────────────────────────────────────
 export const TRACKS = [
     { title: "Sraboner Sesh Baridhara", genre: "Bengali Original", year: "2025", url: "https://youtu.be/6qBDc4Udo9Q" },
@@ -76,24 +86,24 @@ export const MEMBERS = [
 ];
 
 // ── Portfolio: Projects ─────────────────────────────────────────────────
-export const PROJECTS = [
-    { title: "Summer Vibes", category: "Album", year: "2024", desc: "Upbeat summer collection spanning pop, R&B and afrobeats." },
-    { title: "Indie Folk Set", category: "Composition", year: "2024", desc: "A 6-track acoustic journey rooted in folk storytelling." },
-    { title: "Jazz Nights", category: "Live Recording", year: "2023", desc: "Studio-quality live jazz recordings from an intimate venue." },
-    { title: "Serenity", category: "Ambient / Sound Design", year: "2023", desc: "Meditation soundscape crafted for mindfulness apps." },
-    { title: "Pop Fusion", category: "Production", year: "2023", desc: "Contemporary pop with fresh arrangements and catchy hooks." },
-    { title: "World Blend", category: "World Music", year: "2022", desc: "Global sounds fused with modern electronic production." },
-];
+// export const PROJECTS = [
+//     { title: "Summer Vibes", category: "Album", year: "2024", desc: "Upbeat summer collection spanning pop, R&B and afrobeats." },
+//     { title: "Indie Folk Set", category: "Composition", year: "2024", desc: "A 6-track acoustic journey rooted in folk storytelling." },
+//     { title: "Jazz Nights", category: "Live Recording", year: "2023", desc: "Studio-quality live jazz recordings from an intimate venue." },
+//     { title: "Serenity", category: "Ambient / Sound Design", year: "2023", desc: "Meditation soundscape crafted for mindfulness apps." },
+//     { title: "Pop Fusion", category: "Production", year: "2023", desc: "Contemporary pop with fresh arrangements and catchy hooks." },
+//     { title: "World Blend", category: "World Music", year: "2022", desc: "Global sounds fused with modern electronic production." },
+// ];
 
 // ── Portfolio: Services ─────────────────────────────────────────────────
-export const SERVICES = [
-    "Music Production",
-    "Sound Engineering",
-    "Composition & Arrangement",
-    "Live Performance",
-    "Mixing & Mastering",
-    "Music Consultation",
-];
+// export const SERVICES = [
+//     "Music Production",
+//     "Sound Engineering",
+//     "Composition & Arrangement",
+//     "Live Performance",
+//     "Mixing & Mastering",
+//     "Music Consultation",
+// ];
 
 // ── Footer: Socials ─────────────────────────────────────────────────────
 export const SOCIALS = [

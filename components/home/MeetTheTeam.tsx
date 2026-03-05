@@ -42,7 +42,7 @@ export default function MeetTheTeam() {
                     <div className="flex flex-col justify-between flex-1">
                         <div>
                             <h3 className="font-black tracking-[-3px] text-5xl text-gray-900 mb-2">
-                                AMUSICALS
+                                <span className="text-amber-500">A</span>MUSICALS
                             </h3>
                             <p className="text-xl font-thin tracking-[4px] uppercase text-gray-400 ml-2">
                                 MUSIC & BAND

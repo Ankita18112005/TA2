@@ -4,7 +4,8 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import GridBg from "@/components/shared/GridBg";
-import Stack from "@/components/Stack";
+import Stack from "@/components/ui/Stack";
+import { HERO_STACK_IMAGES } from "@/constants/data";
 
 export default function HeroSection() {
     return (
@@ -20,7 +21,7 @@ export default function HeroSection() {
                         CREATIVE MUSIC
                     </h1>
                     <p className="text-2xl md:text-4xl xl:absolute xl:-bottom-12 xl:right-24 mt-2 xl:mt-0 font-thin tracking-[4px] md:tracking-[6px] text-gray-400">
-                        AMUSICALS
+                        <span className="text-amber-500">A</span>MUSICALS
                     </p>
                 </div>
 
@@ -82,14 +83,7 @@ export default function HeroSection() {
                             randomRotation={false}
                             sensitivity={200}
                             sendToBackOnClick={true}
-                            cards={[
-                                "/images/home/teamayan.jpg",
-                                "/images/team/sarthakbw.jpg",
-                                "/images/live/show2.jpg",
-                                "/images/live/show3.jpg",
-                                "/images/gallery/gal10.jpg",
-                                "/images/gallery/gal6.jpg",
-                            ].map((src, i) => (
+                            cards={HERO_STACK_IMAGES.map((src, i) => (
                                 <img
                                     key={i}
                                     src={src}

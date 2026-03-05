@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 import { usePathname } from 'next/navigation';
 import { NAV_LINKS } from '@/constants/data';
 
@@ -10,16 +10,23 @@ export default function Header() {
     const [visible, setVisible] = useState(true);
     const pathname = usePathname();
     const lastScrollY = useRef(0);
+    const openRef = useRef(open);
+
+    // Keep ref in sync
+    useEffect(() => {
+        openRef.current = open;
+    }, [open]);
 
     useEffect(() => {
         const onScroll = () => {
+            // Never hide while mobile menu is open
+            if (openRef.current) return;
+
             const currentY = window.scrollY;
-            // Show when scrolling up or at the very top
             if (currentY < lastScrollY.current || currentY < 10) {
                 setVisible(true);
             } else {
                 setVisible(false);
-                setOpen(false); // close mobile menu when hiding
             }
             lastScrollY.current = currentY;
         };
@@ -28,14 +35,29 @@ export default function Header() {
         return () => window.removeEventListener('scroll', onScroll);
     }, []);
 
+    const toggleMenu = useCallback(() => {
+        setOpen(prev => {
+            const next = !prev;
+            if (next) {
+                // Opening: force navbar visible & reset scroll baseline
+                setVisible(true);
+                lastScrollY.current = window.scrollY;
+            }
+            return next;
+        });
+    }, []);
+
+    // Navbar stays visible if either `visible` is true OR menu is open
+    const isShown = visible || open;
+
     return (
         <header
-            className={`bg-white border-b border-gray-200 sticky top-0 z-50 transition-transform duration-300 ${visible ? 'translate-y-0' : '-translate-y-full'
+            className={`bg-white border-b border-gray-200 sticky top-0 z-50 transition-transform duration-300 ${isShown ? 'translate-y-0' : '-translate-y-full'
                 }`}
         >
             <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
                 <Link href="/" className="text-xl font-black tracking-widest uppercase text-gray-900">
-                    A<span className="text-amber-500">Musicals</span>
+                    <span className="text-amber-500">A</span>Musicals
                 </Link>
 
                 <nav className="hidden md:flex gap-8 text-sm tracking-wide uppercase text-gray-600">
@@ -53,7 +75,7 @@ export default function Header() {
                 {/* Animated Hamburger Button */}
                 <button
                     className="md:hidden relative w-7 h-5 flex flex-col justify-between items-center group"
-                    onClick={() => setOpen(!open)}
+                    onClick={toggleMenu}
                     aria-label="Toggle menu"
                 >
                     <span
