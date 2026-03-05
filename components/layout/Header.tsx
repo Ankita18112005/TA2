@@ -1,16 +1,38 @@
 'use client';
 
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { usePathname } from 'next/navigation';
 import { NAV_LINKS } from '@/constants/data';
 
 export default function Header() {
     const [open, setOpen] = useState(false);
+    const [visible, setVisible] = useState(true);
     const pathname = usePathname();
+    const lastScrollY = useRef(0);
+
+    useEffect(() => {
+        const onScroll = () => {
+            const currentY = window.scrollY;
+            // Show when scrolling up or at the very top
+            if (currentY < lastScrollY.current || currentY < 10) {
+                setVisible(true);
+            } else {
+                setVisible(false);
+                setOpen(false); // close mobile menu when hiding
+            }
+            lastScrollY.current = currentY;
+        };
+
+        window.addEventListener('scroll', onScroll, { passive: true });
+        return () => window.removeEventListener('scroll', onScroll);
+    }, []);
 
     return (
-        <header className="bg-white border-b border-gray-200 sticky top-0 z-50">
+        <header
+            className={`bg-white border-b border-gray-200 sticky top-0 z-50 transition-transform duration-300 ${visible ? 'translate-y-0' : '-translate-y-full'
+                }`}
+        >
             <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
                 <Link href="/" className="text-xl font-black tracking-widest uppercase text-gray-900">
                     Team<span className="text-amber-500">Ayan</span>
