@@ -414,7 +414,7 @@ export const Component = () => {
       {/* Divider + copyright */}
       <div className="border-t border-gray-800 max-w-7xl mx-auto">
         <div className="px-10 py-6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs tracking-wider uppercase">
-          <p>&copy; {new Date().getFullYear()} <span className="text-amber-500">A</span>Musicals. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} AMusicals. All rights reserved.</p>
           <p className="text-gray-600">Designed and Developed by <span className="text-amber-500 font-bold">TEAM PAROT</span>.</p>
         </div>
       </div>

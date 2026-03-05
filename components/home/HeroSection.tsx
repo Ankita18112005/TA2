@@ -65,9 +65,9 @@ export default function HeroSection() {
                     </p>
                 </div>
                 <div className="flex justify-center pt-6">
-                    <Link href="/contact">
+                    <Link href="/live-shows">
                         <Button size="lg" className="uppercase tracking-widest">
-                            Book a Session
+                            Our Live Shows
                         </Button>
                     </Link>
                 </div>

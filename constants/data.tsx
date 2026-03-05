@@ -11,7 +11,6 @@ export const NAV_LINKS = [
 
 // ── Home: Hero Stack Images ─────────────────────────────────────────────
 export const HERO_STACK_IMAGES = [
-    "/images/home/teamayan.jpg",
     "/images/team/sarthakcol.jpg",
     "/images/live/show2.jpg",
     "/images/live/show3.jpg",
