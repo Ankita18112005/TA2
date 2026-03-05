@@ -430,7 +430,7 @@ export const Component = () => {
             className="h-full w-full"
             squareSize={mobile ? 1 : 2}
             gridGap={mobile ? 1 : tablet ? 2 : 3}
-            color="text-amber-500"
+            color="#FFFFFF"
             maxOpacity={mobile ? 0.25 : 0.5}
             flickerChance={0.1}
           />
