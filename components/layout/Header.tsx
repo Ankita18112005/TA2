@@ -35,7 +35,7 @@ export default function Header() {
         >
             <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
                 <Link href="/" className="text-xl font-black tracking-widest uppercase text-gray-900">
-                    Team<span className="text-amber-500">Ayan</span>
+                    A<span className="text-amber-500">Musicals</span>
                 </Link>
 
                 <nav className="hidden md:flex gap-8 text-sm tracking-wide uppercase text-gray-600">

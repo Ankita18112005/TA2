@@ -38,7 +38,7 @@ export default function TeamMembers() {
                                 <img
                                     src={m.image}
                                     alt={m.name}
-                                    className="w-full object-cover grayscale"
+                                    className="flex-1 min-w-0 object-cover grayscale"
                                     style={{ height: "320px" }}
                                 />
                                 <div className="text-left p-2 rotate-180 [writing-mode:vertical-rl] text-xs font-medium tracking-widest text-gray-500 shrink-0">

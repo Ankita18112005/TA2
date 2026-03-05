@@ -4,7 +4,7 @@ import GridBg from "@/components/shared/GridBg";
 
 export default function ContactInfo() {
     return (
-        <section className="relative overflow-hidden py-24 bg-gray-50 border-t border-gray-200">
+        <section id="get-in-touch" className="relative overflow-hidden py-24 bg-gray-50 border-t border-gray-200">
             <GridBg />
             <div className="relative z-10 max-w-7xl mx-auto px-6">
                 <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
@@ -17,7 +17,9 @@ export default function ContactInfo() {
                         </h2>
                     </div>
                     <a
-                        href="mailto:info@teamayan.com"
+                        href="https://mail.google.com/mail/?view=cm&to=hello@teamayan.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="flex items-center gap-3 bg-gray-900 hover:bg-amber-500 text-white font-bold uppercase tracking-widest px-10 py-5 text-sm transition w-fit"
                     >
                         Contact Us

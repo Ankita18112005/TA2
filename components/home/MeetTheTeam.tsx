@@ -31,21 +31,21 @@ export default function MeetTheTeam() {
                     <div className="relative flex bg-gray-100 overflow-hidden w-full lg:max-w-xl">
                         <img
                             src="/images/home/teamayan.jpg"
-                            alt="Team Ayan"
-                            className="w-full object-cover grayscale"
+                            alt="AMusicals"
+                            className="w-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
                             style={{ height: 320 }}
                         />
                         <div className="text-left p-2 rotate-180 [writing-mode:vertical-rl] text-xs font-medium tracking-widest text-gray-500 shrink-0">
-                            NEW DELHI, INDIA
+                            KOLKATA, WEST BENGAL
                         </div>
                     </div>
                     <div className="flex flex-col justify-between flex-1">
                         <div>
                             <h3 className="font-black tracking-[-3px] text-5xl text-gray-900 mb-2">
-                                TEAM AYAN
+                                AMUSICALS
                             </h3>
-                            <p className="text-xl font-thin tracking-[4px] uppercase text-gray-400">
-                                Lead Composer
+                            <p className="text-xl font-thin tracking-[4px] uppercase text-gray-400 ml-2">
+                                MUSIC & BAND
                             </p>
                         </div>
                         <p className="font-mono text-sm tracking-wide text-gray-500 uppercase leading-relaxed mt-8">

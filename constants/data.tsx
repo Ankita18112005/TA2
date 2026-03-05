@@ -11,10 +11,10 @@ export const NAV_LINKS = [
 
 // ── Home: Featured Tracks ───────────────────────────────────────────────
 export const TRACKS = [
-  { title: "Sraboner Sesh Baridhara", genre: "Bengali Original", year: "2025", url: "https://youtu.be/6qBDc4Udo9Q" },
-  { title: "Ichhera Jaak Ure", genre: "Bengali Romantic Sad", year: "2025", url: "https://youtu.be/vfLLQYluR6c" },
-  { title: "Bou Katha", genre: "Bengali Kirtan", year: "2024", url: "https://youtu.be/VIsw5ncZeTg" },
-  { title: "Tomake Chuye Dilam", genre: "Bengali Soulful", year: "2024", url: "https://youtu.be/mMZLM38ePJY" },
+    { title: "Sraboner Sesh Baridhara", genre: "Bengali Original", year: "2025", url: "https://youtu.be/6qBDc4Udo9Q" },
+    { title: "Ichhera Jaak Ure", genre: "Bengali Romantic Sad", year: "2025", url: "https://youtu.be/vfLLQYluR6c" },
+    { title: "Bou Katha", genre: "Bengali Kirtan", year: "2024", url: "https://youtu.be/VIsw5ncZeTg" },
+    { title: "Tomake Chuye Dilam", genre: "Bengali Soulful", year: "2024", url: "https://youtu.be/mMZLM38ePJY" },
 ];
 
 // ── Team: Members ───────────────────────────────────────────────────────
@@ -22,7 +22,7 @@ export const MEMBERS = [
     {
         name: "AYAN MUKHERJEE",
         role: "Lead Composer & Producer",
-        location: "NEW DELHI, INDIA",
+        location: "KOLKATA, WEST BENGAL",
         skills: ["/ COMPOSITION", "/ PRODUCTION", "/ ARRANGEMENT"],
         image: "images/team/ayanbw.jpg",
         desc: "5+ years shaping the sonic identity of artists, brands and film projects across genres.",
@@ -36,7 +36,7 @@ export const MEMBERS = [
     {
         name: "PAPIA GUPTA",
         role: "Vocalist & Songwriter",
-        location: "MUMBAI, INDIA",
+        location: "KOLKATA, WEST BENGAL",
         skills: ["/ VOCALS", "/ SONGWRITING", "/ PERFORMANCE"],
         image: "images/team/papiacol.jpg",
         desc: "An award-winning vocalist bringing emotion and depth to every song she touches.",
@@ -48,7 +48,7 @@ export const MEMBERS = [
     {
         name: "SARTHAK GHOSH",
         role: "Sound Engineer",
-        location: "BANGALORE, INDIA",
+        location: "KOLKATA, WEST BENGAL",
         skills: ["/ MIXING", "/ MASTERING", "/ SOUND DESIGN"],
         image: "images/team/sarthakbw.jpg",
         desc: "Studio-grade engineer ensuring pristine audio across every medium.",
@@ -62,7 +62,7 @@ export const MEMBERS = [
     {
         name: "HRICK SENGUPTA",
         role: "Mix Engineer",
-        location: "KOLKATA, INDIA",
+        location: "KOLKATA, WEST BENGAL",
         skills: ["/ PRODUCTION", "/ BEATS", "/ COLLABORATION"],
         image: "images/team/hrickbw.jpg",
         desc: "Innovative producer fusing world music traditions with cutting-edge electronic sounds.",
@@ -72,7 +72,7 @@ export const MEMBERS = [
             { title: "Sapnon Se Bhare Naina", url: "https://youtu.be/rNuj_ZdF1Fk" },
         ],
     },
-   
+
 ];
 
 // ── Portfolio: Projects ─────────────────────────────────────────────────

@@ -309,9 +309,9 @@ export const siteConfig = {
     {
       title: "Get in Touch",
       links: [
-        { id: 20, title: "hello@teamayan.com", url: "mailto:hello@teamayan.com" },
-        { id: 21, title: "New Delhi, India", url: "#" },
-        { id: 22, title: "Contact Us", url: "/contact" },
+        { id: 20, title: "hello@teamayan.com", url: "https://mail.google.com/mail/?view=cm&to=hello@teamayan.com", external: true },
+        { id: 21, title: "Kolkata, West Bengal", url: "", noLink: true },
+        { id: 22, title: "Contact Us", url: "#get-in-touch" },
       ],
     },
   ],
@@ -331,7 +331,7 @@ export const Component = () => {
         <div className="flex flex-col items-start justify-start gap-y-5 max-w-xs mx-0">
           <Link href="/" className="flex items-center gap-2">
             <p className="text-2xl font-black tracking-widest uppercase text-white">
-              Team<span className="text-amber-500">Ayan</span>
+              A<span className="text-amber-500">Musicals</span>
             </p>
           </Link>
           <p className="tracking-tight text-gray-400 font-medium text-sm leading-relaxed">
@@ -367,15 +367,41 @@ export const Component = () => {
                     key={link.id}
                     className="group inline-flex cursor-pointer items-center justify-start gap-1 text-sm tracking-wide text-gray-400"
                   >
-                    <Link
-                      href={link.url}
-                      className="hover:text-amber-500 transition"
-                    >
-                      {link.title}
-                    </Link>
-                    <div className="flex size-4 items-center justify-center border border-gray-700 rounded translate-x-0 transform opacity-0 transition-all duration-300 ease-out group-hover:translate-x-1 group-hover:opacity-100">
-                      <ChevronRightIcon className="h-4 w-4" />
-                    </div>
+                    {"noLink" in link && link.noLink ? (
+                      <span className="text-gray-400">{link.title}</span>
+                    ) : "external" in link && link.external ? (
+                      <a
+                        href={link.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:text-amber-500 hover:underline transition"
+                      >
+                        {link.title}
+                      </a>
+                    ) : link.url.startsWith("#") ? (
+                      <a
+                        href={link.url}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          document.querySelector(link.url)?.scrollIntoView({ behavior: "smooth" });
+                        }}
+                        className="hover:text-amber-500 hover:underline transition"
+                      >
+                        {link.title}
+                      </a>
+                    ) : (
+                      <Link
+                        href={link.url}
+                        className="hover:text-amber-500 transition"
+                      >
+                        {link.title}
+                      </Link>
+                    )}
+                    {!("noLink" in link && link.noLink) && (
+                      <div className="flex size-4 items-center justify-center border border-gray-700 rounded translate-x-0 transform opacity-0 transition-all duration-300 ease-out group-hover:translate-x-1 group-hover:opacity-100">
+                        <ChevronRightIcon className="h-4 w-4" />
+                      </div>
+                    )}
                   </li>
                 ))}
               </ul>
@@ -387,7 +413,7 @@ export const Component = () => {
       {/* Divider + copyright */}
       <div className="border-t border-gray-800 max-w-7xl mx-auto">
         <div className="px-10 py-6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs tracking-wider uppercase">
-          <p>&copy; {new Date().getFullYear()} Team Ayan. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} AMusicals. All rights reserved.</p>
           <p className="text-gray-600">Designed and Developed by <span className="text-amber-500 font-bold">TEAM PAROT</span>.</p>
         </div>
       </div>
@@ -397,7 +423,7 @@ export const Component = () => {
         <div className="absolute inset-0 bg-gradient-to-t from-transparent to-gray-900 z-10 from-40%" />
         <div className="absolute inset-0 mx-6">
           <FlickeringGrid
-            text={tablet ? "AYAN" : "TEAM AYAN"}
+            text={tablet ? "AM" : "AMUSICALS"}
             fontSize={tablet ? 70 : 90}
             fontWeight={900}
             className="h-full w-full"

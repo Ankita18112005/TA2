@@ -20,7 +20,7 @@ export default function HeroSection() {
                         CREATIVE MUSIC
                     </h1>
                     <p className="text-2xl md:text-4xl xl:absolute xl:-bottom-12 xl:right-24 mt-2 xl:mt-0 font-thin tracking-[4px] md:tracking-[6px] text-gray-400">
-                        TEAM AYAN
+                        AMUSICALS
                     </p>
                 </div>
 

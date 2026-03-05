@@ -4,7 +4,7 @@ import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 
 export const metadata: Metadata = {
-  title: 'Team Ayan | Music Portfolio',
+  title: 'AMusicals | Music Portfolio',
   description: 'Composers, producers and performers crafting original music.',
   icons: {
     icon: '/images/icon/favicon.ico',
