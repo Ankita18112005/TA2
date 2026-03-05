@@ -18,7 +18,7 @@ export default function HeroSection() {
                     <h1 className="z-20 relative font-black text-gray-900 text-left md:text-center tracking-[-4px] text-5xl sm:text-7xl md:text-9xl xl:tracking-[-1rem] sm:tracking-[-7px] md:tracking-[-14px] xl:text-[10rem]">
                         <span className="text-amber-500">A</span>MUSICALS
                     </h1>
-                    <p className="text-xl sm:text-2xl md:text-4xl xl:absolute xl:-bottom-12 xl:left-48 z-30 mt-2 xl:mt-0 font-thin tracking-[4px] md:tracking-[6px] text-gray-400">
+                    <p className="text-xl sm:text-2xl md:text-4xl xl:absolute xl:-bottom-12 xl:left-48 z-30 mt-2 xl:mt-0 font-thin tracking-[4px] md:tracking-[6px] md:pl-[10%] xl:pl-0 text-gray-400">
                         <span className="text-amber-500">CREATIVE </span>MUSIC
                     </p>
                 </div>
@@ -34,9 +34,9 @@ export default function HeroSection() {
                             </div>
                             <div className="absolute hidden md:flex left-1/2 -top-10 w-fit overflow-hidden bg-gray-100">
                                 <img
-                                    src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=600&auto=format&fit=crop&q=80"
+                                    src="/images/home/teamayan.jpg"
                                     alt="Studio microphone"
-                                    className="h-[350px] lg:h-[400px] w-full object-contain grayscale"
+                                    className="h-[350px] lg:h-[400px] w-full object-contain"
                                 />
                                 
                             </div>
@@ -44,12 +44,12 @@ export default function HeroSection() {
                     </div>
                     <div className="flex md:hidden w-full overflow-hidden bg-gray-100 -mt-4">
                         <img
-                            src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=600&auto=format&fit=crop&q=80"
+                            src="/images/home/teamayan.jpg"
                             alt="Studio microphone"
-                            className="h-[300px] sm:h-[400px] flex-1 min-w-0 object-contain grayscale"
+                            className="h-[300px] sm:h-[400px] flex-1 min-w-0 object-contain"
                         />
                         <div className="text-left p-2 rotate-180 [writing-mode:vertical-rl] text-xs font-medium tracking-widest text-gray-500 shrink-0">
-                            BASED IN NEW DELHI
+                            BASED IN KOLKATA
                         </div>
                     </div>
                 </div>

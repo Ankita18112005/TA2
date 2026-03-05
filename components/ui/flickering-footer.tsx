@@ -422,7 +422,7 @@ export const Component = () => {
       {/* Flickering grid banner */}
       <div className="w-full h-48 md:h-64 relative mt-4 z-0">
         <div className="absolute inset-0 bg-gradient-to-t from-transparent to-gray-900 z-10 from-20%" />
-        <div className="absolute inset-0 mx-6">
+        <div className="absolute inset-0">
           <FlickeringGrid
             text="AMUSICALS"
             fontSize={mobile ? 36 : tablet ? 60 : 90}
