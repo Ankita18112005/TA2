@@ -13,14 +13,14 @@ const INACTIVE_RIGHT_FLEX = 0.5;   // panels AFTER active (right side)
 
 const images = [
     { src: "/images/live-hero/lh1.jpg", position: "center" },
-    { src: "/images/live-hero/lh2.jpg", position: "center top" },
-    { src: "/images/live-hero/lh3.jpg", position: "center 20%" },
-    { src: "/images/live-hero/lh4.jpg", position: "center" },
-    { src: "/images/live-hero/lh5.jpg", position: "center" },
-    { src: "/images/live-hero/lh6.jpg", position: "center 70% top" },
+    { src: "/images/live-hero/lh2.jpg", position: "60% center" },
+    { src: "/images/live-hero/lh3.jpg", position: "60% center" },
+    { src: "/images/live-hero/lh4.jpg", position: "center 60%" },
+    { src: "/images/live-hero/lh5.jpg", position: "center 20%" },
+    { src: "/images/live-hero/lh6.jpg", position: "center top" },
     { src: "/images/live-hero/lh7.jpg", position: "center" },
-    { src: "/images/live-hero/lh8.jpg", position: "center" },
-    { src: "/images/live-hero/lh9.jpg", position: "center" },
+    { src: "/images/live-hero/lh8.jpg", position: "center top" },
+    { src: "/images/live-hero/lh9.jpg", position: "center 35%" },
     { src: "/images/live-hero/lh10.jpg", position: "center" },
 ];
 
