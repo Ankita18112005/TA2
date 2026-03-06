@@ -1,31 +1,51 @@
 "use client";
 
 /* eslint-disable @next/next/no-img-element */
-import Stack from "@/components/ui/Stack";
+import { useRef } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { EffectCards, Autoplay } from "swiper/modules";
 import { HERO_STACK_IMAGES } from "@/constants/data";
+import type { Swiper as SwiperType } from "swiper";
+
+import "swiper/css";
+import "swiper/css/effect-cards";
 
 export default function RecentWorks() {
+    const swiperRef = useRef<SwiperType | null>(null);
+
     return (
         <section className="overflow-hidden relative pb-20">
             <div className="mx-auto max-w-7xl relative z-20 px-6">
                 <div className="md:flex items-end justify-between">
-                    <div className="w-72 h-56 md:w-96 md:h-72 mb-8 md:mb-0 mx-auto md:mx-0 md:-ml-0">
-                        <Stack
-                            randomRotation={false}
-                            sensitivity={200}
-                            sendToBackOnClick={true}
-                            cards={HERO_STACK_IMAGES.map((src, i) => (
-                                <img
+                    <div className="w-72 h-56 md:w-96 md:h-72 mb-8 md:mb-0 mx-auto md:mx-0">
+                        <Swiper
+                            modules={[EffectCards, Autoplay]}
+                            effect="cards"
+                            grabCursor={true}
+                            autoplay={{ delay: 3000, disableOnInteraction: false }}
+                            loop={true}
+                            cardsEffect={{
+                                slideShadows: true,
+                                perSlideOffset: 8,
+                                perSlideRotate: 2,
+                            }}
+                            onSwiper={(swiper) => { swiperRef.current = swiper; }}
+                            className="w-full h-full recentworks-swiper"
+                        >
+                            {HERO_STACK_IMAGES.map((src, i) => (
+                                <SwiperSlide
                                     key={i}
-                                    src={src}
-                                    alt={`recent-work-${i + 1}`}
-                                    style={{ width: "100%", height: "100%", objectFit: "cover" }}
-                                />
-                            )) as React.ReactNode[]}
-                            autoplay={true}
-                            autoplayDelay={3000}
-                            pauseOnHover={true}
-                        />
+                                    className="rounded-2xl overflow-hidden cursor-pointer"
+                                    onClick={() => swiperRef.current?.slideNext()}
+                                >
+                                    <img
+                                        src={src}
+                                        alt={`recent-work-${i + 1}`}
+                                        className="w-full h-full object-cover pointer-events-none"
+                                    />
+                                </SwiperSlide>
+                            ))}
+                        </Swiper>
                     </div>
                     <div>
                         <div className="flex items-center md:justify-end gap-2 text-gray-500">
