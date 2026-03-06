@@ -174,9 +174,6 @@ export default function LoadingScreen() {
     useEffect(() => {
         setIsMobile(window.innerWidth < 640);
 
-        // Remove the instant HTML overlay now that our animated one has taken over
-        document.getElementById("initial-loader")?.remove();
-
         const timer = setTimeout(() => {
             setShow(false);
         }, 2800);
