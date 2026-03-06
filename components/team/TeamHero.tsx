@@ -1,20 +1,6 @@
 import GridBg from "@/components/shared/GridBg";
 import Link from "next/link";
-
-const NAMES = ["AYAN", "PAPIA", "HRICK", "SARTHAK"];
-const SKILLS = [
-    "VOCALS",
-    "COMPOSITION",
-    "PRODUCTION",
-    "ARRANGEMENT",
-    "KEYBOARD",
-    "GUITAR",
-    "MIXING",
-    "MASTERING",
-    "SONGWRITING",
-    "SOUND DESIGN",
-    "LIVE PERFORMANCE",
-];
+import { TEAM_HERO_NAMES, TEAM_HERO_SKILLS } from "@/constants/data";
 
 export default function TeamHero() {
     return (
@@ -23,7 +9,7 @@ export default function TeamHero() {
 
             {/* ── Watermark names (background) ────────────────────── */}
             <div className="absolute inset-0 z-[1] flex flex-col justify-end sm:justify-center items-end pr-4 pb-32 sm:pb-0 md:pr-16 opacity-[0.06] sm:opacity-[0.07] pointer-events-none select-none overflow-hidden">
-                {NAMES.map((name) => (
+                {TEAM_HERO_NAMES.map((name) => (
                     <p
                         key={name}
                         className="font-black text-[5rem] sm:text-[6rem] md:text-[8rem] lg:text-[10rem] leading-[0.85] tracking-[-2px] sm:tracking-[-4px] md:tracking-[-8px] text-gray-900 whitespace-nowrap"
@@ -60,7 +46,7 @@ export default function TeamHero() {
             <div className="relative z-10 mt-auto border-t border-b border-gray-200 py-4 overflow-hidden">
                 <div className="flex animate-marquee whitespace-nowrap">
                     {/* Duplicate the list twice for seamless loop */}
-                    {[...SKILLS, ...SKILLS].map((skill, i) => (
+                    {[...TEAM_HERO_SKILLS, ...TEAM_HERO_SKILLS].map((skill, i) => (
                         <span key={`${skill}-${i}`} className="flex items-center">
                             <span className="text-xs sm:text-sm font-bold tracking-[0.3em] uppercase text-gray-900 px-6 md:px-10">
                                 {skill}

@@ -18,6 +18,37 @@ export const HERO_STACK_IMAGES = [
     "/images/gallery/gal6.jpg",
 ];
 
+// ── Live Shows: Hero Images ─────────────────────────────────────────────
+export const LIVE_HERO_IMAGES = [
+    { src: "/images/live-hero/lh1.jpg", position: "center" },
+    { src: "/images/live-hero/lh2.jpg", position: "60% center" },
+    { src: "/images/live-hero/lh3.jpg", position: "60% center" },
+    { src: "/images/live-hero/lh4.jpg", position: "center 60%" },
+    { src: "/images/live-hero/lh5.jpg", position: "center 20%" },
+    { src: "/images/live-hero/lh6.jpg", position: "center top" },
+    { src: "/images/live-hero/lh7.jpg", position: "center" },
+    { src: "/images/live-hero/lh8.jpg", position: "center top" },
+    { src: "/images/live-hero/lh9.jpg", position: "center 35%" },
+    { src: "/images/live-hero/lh10.jpg", position: "center" },
+];
+
+// ── Team: Hero Watermark Names & Skills ─────────────────────────────────
+export const TEAM_HERO_NAMES = ["AYAN", "PAPIA", "HRICK", "SARTHAK"];
+
+export const TEAM_HERO_SKILLS = [
+    "VOCALS",
+    "COMPOSITION",
+    "PRODUCTION",
+    "ARRANGEMENT",
+    "KEYBOARD",
+    "GUITAR",
+    "MIXING",
+    "MASTERING",
+    "SONGWRITING",
+    "SOUND DESIGN",
+    "LIVE PERFORMANCE",
+];
+
 // ── Home: Featured Tracks ───────────────────────────────────────────────
 export const TRACKS = [
     { title: "Sraboner Sesh Baridhara", genre: "Bengali Original", year: "2025", url: "https://youtu.be/6qBDc4Udo9Q" },
