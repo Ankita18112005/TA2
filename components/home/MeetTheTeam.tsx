@@ -49,7 +49,7 @@ export default function MeetTheTeam() {
                             </p>
                         </div>
                         <p className="font-mono text-sm tracking-wide text-gray-500 uppercase leading-relaxed mt-8">
-                            10+ years shaping the sonic identity of artists, brands and film
+                            Years of shaping the musical identity of artists, brands and
                             projects across genres.
                         </p>
                     </div>

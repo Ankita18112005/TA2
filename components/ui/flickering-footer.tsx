@@ -299,17 +299,15 @@ export const siteConfig = {
     {
       title: "Services",
       links: [
-        { id: 10, title: "Music Production", url: "/portfolio" },
-        { id: 11, title: "Sound Engineering", url: "/portfolio" },
+        { id: 10, title: "Music Production", url: "#get-in-touch" },
+        { id: 11, title: "Sound Engineering", url: "#get-in-touch" },
         { id: 12, title: "Live Performance", url: "/live-shows" },
-        { id: 13, title: "Film Scoring", url: "/portfolio" },
-        { id: 14, title: "Music Consultation", url: "/contact" },
       ],
     },
     {
       title: "Get in Touch",
       links: [
-        { id: 20, title: "hello@teamayan.com", url: "https://mail.google.com/mail/?view=cm&to=hello@teamayan.com", external: true },
+        { id: 20, title: "hello@amusicals.com", url: "https://mail.google.com/mail/?view=cm&to=hello@teamayan.com", external: true },
         { id: 21, title: "Kolkata, West Bengal", url: "", noLink: true },
         { id: 22, title: "Contact Us", url: "#get-in-touch" },
       ],
@@ -415,7 +413,7 @@ export const Component = () => {
       <div className="border-t border-gray-800 max-w-7xl mx-auto">
         <div className="px-10 py-6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs tracking-wider uppercase">
           <p>&copy; {new Date().getFullYear()} AMusicals. All rights reserved.</p>
-          <p className="text-gray-600">Designed and Developed by <span className="text-amber-500 font-bold">TEAM PAROT</span>.</p>
+          <p className="text-gray-600">Designed and Developed by <a href="https://www.parot.dev" target="_blank" rel="noopener noreferrer" className="text-amber-500 font-bold hover:text-lime-800">TEAM PAROT</a>.</p>
         </div>
       </div>
 

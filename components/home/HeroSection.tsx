@@ -57,9 +57,9 @@ export default function HeroSection() {
                 {/* Tagline */}
                 <div className="md:mt-24 lg:mt-40 mt-10">
                     <p className="mx-auto max-w-2xl font-mono text-center text-xs sm:text-sm font-medium tracking-wide md:text-base text-gray-500">
-                        WE ARE EXPERIENCED COMPOSERS AND PRODUCERS,
+                        WE ARE ENTHUSIASTIC COMPOSERS AND PERFORMERS,
                         <br />
-                        WHO CREATE MEMORABLE SONIC EXPERIENCES FOR
+                        WHO CREATE MEMORABLE MUSICAL EXPERIENCES FOR
                         <br />
                         BRANDS AND AUDIENCES OF ALL SIZES
                     </p>

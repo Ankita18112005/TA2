@@ -1,4 +1,10 @@
+import type { Metadata } from "next";
 import HeroSection from "@/components/home/HeroSection";
+
+export const metadata: Metadata = {
+  title: "AMusicals | Creating Music",
+  description: "Original Bengali compositions, live performances and studio productions by AMusicals — a collective of composers, vocalists and engineers based in Kolkata.",
+};
 import RecentWorks from "@/components/home/RecentWorks";
 import FeaturedTracks from "@/components/home/FeaturedTracks";
 import StatsBar from "@/components/home/StatsBar";

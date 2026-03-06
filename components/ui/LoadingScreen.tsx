@@ -214,7 +214,7 @@ export default function LoadingScreen() {
 
                     {/* Bottom tagline */}
                     <motion.p
-                        className="absolute bottom-12 text-[10px] sm:text-xs font-mono tracking-[0.4em] uppercase text-gray-950"
+                        className="absolute bottom-12 text-[10px] sm:text-xs font-bold tracking-[0.4em] uppercase text-gray-950"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.6, duration: 0.8 }}
