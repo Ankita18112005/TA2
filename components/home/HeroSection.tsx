@@ -13,7 +13,7 @@ export default function HeroSection() {
                 {/* Headline */}
                 <div className="relative">
                     <p className="text-sm absolute -top-4 left-2 md:left-20 font-medium tracking-wider text-gray-400">
-                        EST. 2026
+                        EST. 2024
                     </p>
                     <h1 className="z-20 relative font-black text-gray-900 text-left md:text-center tracking-[-4px] text-5xl sm:text-7xl md:text-9xl xl:tracking-[-1rem] sm:tracking-[-7px] md:tracking-[-14px] xl:text-[10rem]">
                         <span className="text-amber-500">A</span>MUSICALS
@@ -38,7 +38,7 @@ export default function HeroSection() {
                                     alt="Studio microphone"
                                     className="h-[350px] lg:h-[400px] w-full object-contain"
                                 />
-                                
+
                             </div>
                         </div>
                     </div>

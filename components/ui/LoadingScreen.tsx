@@ -201,7 +201,7 @@ export default function LoadingScreen() {
                     <LoaderGrid
                         squareSize={isMobile ? 2 : 3}
                         gridGap={isMobile ? 2 : 3}
-                        color="#F59E0B"
+                        color="#ff0063"
                         maxOpacity={0.2}
                         flickerChance={0.35}
                         text="AMUSICALS"
