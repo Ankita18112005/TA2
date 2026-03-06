@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import LiveShowsHero from "@/components/live-shows/LiveShowsHero";
+import InteractiveSelector from "@/components/ui/interactive-selector";
 
 export const metadata: Metadata = {
     title: "Live Shows | AMusicals",
@@ -13,7 +13,7 @@ import ContactInfo from "@/components/home/ContactInfo";
 export default function LiveShows() {
     return (
         <div className="bg-white">
-            <LiveShowsHero />
+            <InteractiveSelector />
             <FeaturedShows />
             <PhotoGallery />
             <StatsBar />
