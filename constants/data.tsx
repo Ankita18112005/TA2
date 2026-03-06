@@ -178,13 +178,13 @@ export const SHOWS = [
 // ── Live Shows: Gallery ─────────────────────────────────────────────────
 export const GALLERY = [
     { src: "/images/gallery/gal1.jpg", alt: "Live performance wide shot" },
-    { src: "/images/gallery/gal2.jpg", alt: "Crowd energy" },
-    { src: "/images/gallery/gal3.jpg", alt: "Backstage moments" },
+    { src: "/images/gallery/gal2.jpg", alt: "the moment live" },
+    { src: "/images/gallery/gal3.jpg", alt: "live vocals" },
     { src: "/images/gallery/gal4.jpg", alt: "On-stage close-up" },
     { src: "/images/gallery/gal5.jpg", alt: "Sound check" },
     { src: "/images/gallery/gal6.jpg", alt: "Band together" },
-    { src: "/images/gallery/gal7.jpg", alt: "Encore moment" },
-    { src: "/images/gallery/gal8.jpg", alt: "Fans and the stage" },
-    { src: "/images/gallery/gal9.jpg", alt: "Behind the scenes" },
+    { src: "/images/gallery/gal7.jpg", alt: "the lead voice" },
+    { src: "/images/gallery/gal8.jpg", alt: "the sound of keys" },
+    { src: "/images/gallery/gal9.jpg", alt: "the stage moment" },
     { src: "/images/gallery/gal10.jpg", alt: "Band performing" },
 ];

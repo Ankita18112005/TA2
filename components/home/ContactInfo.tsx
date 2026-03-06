@@ -28,23 +28,32 @@ export default function ContactInfo() {
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5">
-                    {SOCIALS.map((s) => (
-                        <a
-                            key={s.label}
-                            href={s.href}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label={s.label}
-                            className="group flex items-center gap-4 bg-white border border-gray-200 px-6 py-4 hover:border-amber-500 hover:bg-amber-50 transition w-full"
-                        >
-                            <span className="w-10 h-10 rounded-full bg-gray-100 group-hover:bg-amber-500 flex items-center justify-center text-gray-500 group-hover:text-white transition">
-                                {s.icon}
-                            </span>
-                            <span className="font-bold text-gray-900 text-sm tracking-wider uppercase group-hover:text-amber-500 transition">
-                                {s.label}
-                            </span>
-                        </a>
-                    ))}
+                    {SOCIALS.map((s) => {
+                        const brandColors: Record<string, { border: string; bg: string; icon: string; text: string }> = {
+                            "YouTube": { border: "hover:border-red-500", bg: "hover:bg-red-50", icon: "group-hover:bg-red-500", text: "group-hover:text-red-500" },
+                            "Instagram": { border: "hover:border-amber-700", bg: "hover:bg-amber-50", icon: "group-hover:bg-amber-600", text: "group-hover:text-amber-600" },
+                            "Spotify": { border: "hover:border-green-500", bg: "hover:bg-green-50", icon: "group-hover:bg-green-500", text: "group-hover:text-green-500" },
+                            "Twitter / X": { border: "hover:border-black", bg: "hover:bg-gray-100", icon: "group-hover:bg-black", text: "group-hover:text-black" },
+                        };
+                        const c = brandColors[s.label] ?? { border: "hover:border-amber-500", bg: "hover:bg-amber-50", icon: "group-hover:bg-amber-500", text: "group-hover:text-amber-500" };
+                        return (
+                            <a
+                                key={s.label}
+                                href={s.href}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label={s.label}
+                                className={`group flex items-center gap-4 bg-white border border-gray-200 px-6 py-4 ${c.border} ${c.bg} transition w-full`}
+                            >
+                                <span className={`w-10 h-10 rounded-full bg-gray-100 ${c.icon} flex items-center justify-center text-gray-500 group-hover:text-white transition`}>
+                                    {s.icon}
+                                </span>
+                                <span className={`font-bold text-gray-900 text-sm tracking-wider uppercase ${c.text} transition`}>
+                                    {s.label}
+                                </span>
+                            </a>
+                        );
+                    })}
                 </div>
             </div>
         </section>

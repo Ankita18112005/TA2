@@ -338,18 +338,27 @@ export const Component = () => {
           </p>
           {/* Social icons */}
           <div className="flex gap-3 mt-1">
-            {SOCIALS.map((s) => (
-              <a
-                key={s.label}
-                href={s.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={s.label}
-                className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-amber-500 hover:text-white transition"
-              >
-                {s.icon}
-              </a>
-            ))}
+            {SOCIALS.map((s) => {
+              const brandHover: Record<string, string> = {
+                "YouTube": "hover:bg-red-600 hover:text-white",
+                "Instagram": "hover:bg-amber-600 hover:text-white",
+                "Spotify": "hover:bg-green-500 hover:text-white",
+                "Twitter / X": "hover:bg-black hover:text-white",
+              };
+              const hoverClass = brandHover[s.label] ?? "hover:bg-amber-500 hover:text-white";
+              return (
+                <a
+                  key={s.label}
+                  href={s.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={s.label}
+                  className={`w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 ${hoverClass} transition`}
+                >
+                  {s.icon}
+                </a>
+              );
+            })}
           </div>
         </div>
 
