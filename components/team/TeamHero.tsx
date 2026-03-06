@@ -1,4 +1,5 @@
 import GridBg from "@/components/shared/GridBg";
+import Link from "next/link";
 
 const NAMES = ["AYAN", "PAPIA", "HRICK", "SARTHAK"];
 const SKILLS = [
@@ -44,7 +45,7 @@ export default function TeamHero() {
                     Composers, producers and artists working together<br />
                     to craft music that moves people worldwide.
                 </p>
-                <a
+                <Link
                     href="/live-shows"
                     className="mt-8 inline-flex items-center gap-2 px-6 py-3 bg-gray-900 text-white text-xs font-bold tracking-[0.2em] uppercase hover:bg-amber-500 transition-colors duration-300 w-fit"
                 >
@@ -52,7 +53,7 @@ export default function TeamHero() {
                     <svg className="size-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
                     </svg>
-                </a>
+                </Link>
             </div>
 
             {/* ── Skills marquee strip ─────────────────────────────── */}

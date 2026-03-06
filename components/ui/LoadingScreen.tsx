@@ -167,19 +167,35 @@ function LoaderGrid({
 
 /* ── Main LoadingScreen ──────────────────────────────────────────────── */
 
+// Track globally whether the loading screen has already played
+let hasPlayed = false;
+
+function getIsMobile() {
+    if (typeof window === "undefined") return false;
+    return window.matchMedia("(max-width: 639px)").matches;
+}
+
 export default function LoadingScreen() {
-    const [show, setShow] = useState(true);
-    const [isMobile, setIsMobile] = useState(false);
+    const [show, setShow] = useState(() => {
+        if (hasPlayed) return false;
+        return true;
+    });
+
+    const [isMobile] = useState(getIsMobile);
 
     useEffect(() => {
-        setIsMobile(window.innerWidth < 640);
+        if (!show) return;
+
+        hasPlayed = true;
 
         const timer = setTimeout(() => {
             setShow(false);
         }, 2800);
 
         return () => clearTimeout(timer);
-    }, []);
+    }, [show]);
+
+    if (!show) return null;
 
     return (
         <AnimatePresence>
@@ -194,7 +210,6 @@ export default function LoadingScreen() {
                         transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1] },
                     }}
                 >
-                    {/* Flickering grid filling the entire screen */}
                     <LoaderGrid
                         squareSize={isMobile ? 2 : 3}
                         gridGap={isMobile ? 2 : 3}
