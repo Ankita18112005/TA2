@@ -12,16 +12,16 @@ const INACTIVE_LEFT_FLEX = 0.00;   // panels BEFORE active (left side)
 const INACTIVE_RIGHT_FLEX = 0.5;   // panels AFTER active (right side)
 
 const images = [
-    "/images/gallery/gal1.jpg",
-    "/images/gallery/gal2.jpg",
-    "/images/gallery/gal3.jpg",
-    "/images/gallery/gal4.jpg",
-    "/images/gallery/gal5.jpg",
-    "/images/gallery/gal6.jpg",
-    "/images/gallery/gal7.jpg",
-    "/images/gallery/gal8.jpg",
-    "/images/gallery/gal9.jpg",
-    "/images/gallery/gal10.jpg",
+    "/images/live-hero/lh1.jpg",
+    "/images/live-hero/lh2.jpg",
+    "/images/live-hero/lh3.jpg",
+    "/images/live-hero/lh4.jpg",
+    "/images/live-hero/lh5.jpg",
+    "/images/live-hero/lh6.jpg",
+    "/images/live-hero/lh7.jpg",
+    "/images/live-hero/lh8.jpg",
+    "/images/live-hero/lh9.jpg",
+    "/images/live-hero/lh10.jpg",
 ];
 
 /* ─────────────────────────────────────────────── */
