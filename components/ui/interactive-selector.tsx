@@ -12,16 +12,16 @@ const INACTIVE_LEFT_FLEX = 0.00;   // panels BEFORE active (left side)
 const INACTIVE_RIGHT_FLEX = 0.5;   // panels AFTER active (right side)
 
 const images = [
-    "/images/live-hero/lh1.jpg",
-    "/images/live-hero/lh2.jpg",
-    "/images/live-hero/lh3.jpg",
-    "/images/live-hero/lh4.jpg",
-    "/images/live-hero/lh5.jpg",
-    "/images/live-hero/lh6.jpg",
-    "/images/live-hero/lh7.jpg",
-    "/images/live-hero/lh8.jpg",
-    "/images/live-hero/lh9.jpg",
-    "/images/live-hero/lh10.jpg",
+    { src: "/images/live-hero/lh1.jpg", position: "center" },
+    { src: "/images/live-hero/lh2.jpg", position: "center top" },
+    { src: "/images/live-hero/lh3.jpg", position: "center 20%" },
+    { src: "/images/live-hero/lh4.jpg", position: "center" },
+    { src: "/images/live-hero/lh5.jpg", position: "center" },
+    { src: "/images/live-hero/lh6.jpg", position: "center 70% top" },
+    { src: "/images/live-hero/lh7.jpg", position: "center" },
+    { src: "/images/live-hero/lh8.jpg", position: "center" },
+    { src: "/images/live-hero/lh9.jpg", position: "center" },
+    { src: "/images/live-hero/lh10.jpg", position: "center" },
 ];
 
 /* ─────────────────────────────────────────────── */
@@ -90,7 +90,7 @@ const InteractiveSelector = () => {
                 {/* Render in circular order: active first, rest follow to the right */}
                 {Array.from({ length: images.length }, (_, pos) => {
                     const imgIndex = (active + pos) % images.length;
-                    const src = images[imgIndex];
+                    const { src, position } = images[imgIndex];
                     const isActive = pos === 0;
                     return (
                         <div
@@ -108,10 +108,11 @@ const InteractiveSelector = () => {
                         >
                             {/* image layer */}
                             <div
-                                className="absolute inset-0 bg-center transition-transform duration-700"
+                                className="absolute inset-0 transition-transform duration-700"
                                 style={{
                                     backgroundImage: `url('${src}')`,
                                     backgroundSize: "cover",
+                                    backgroundPosition: position,
                                     transform: isActive ? "scale(1)" : "scale(1.15)",
                                 }}
                             />
@@ -133,12 +134,13 @@ const InteractiveSelector = () => {
                 MOBILE  (<md) — full‑screen crossfade
             ═══════════════════════════════════════════ */}
             <div className="md:hidden absolute inset-0">
-                {images.map((src, i) => (
+                {images.map(({ src, position }, i) => (
                     <div
                         key={i}
-                        className="absolute inset-0 bg-center bg-cover transition-opacity duration-700"
+                        className="absolute inset-0 bg-cover transition-opacity duration-700"
                         style={{
                             backgroundImage: `url('${src}')`,
+                            backgroundPosition: position,
                             opacity: active === i ? 1 : 0,
                             zIndex: active === i ? 1 : 0,
                         }}
