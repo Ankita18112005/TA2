@@ -164,13 +164,6 @@ const InteractiveSelector = () => {
                 Hero text — scales across breakpoints
             ═══════════════════════════════════════════ */}
             <div className="relative z-[6] flex flex-col justify-end md:justify-center h-full max-w-7xl mx-auto px-5 sm:px-8 pb-24 md:pb-0 pointer-events-none">
-                <Link
-                    href="/team"
-                    className="hidden md:inline-flex items-center gap-2 text-[11px] font-medium tracking-widest text-gray-400 hover:text-amber-500 transition mb-5 uppercase pointer-events-auto w-fit"
-                >
-                    <ArrowLeft className="size-3" /> Back to Team
-                </Link>
-
                 <p className="text-[10px] sm:text-xs font-semibold tracking-[0.3em] text-amber-500 mb-2 md:mb-3 uppercase">
                     Captured On Stage
                 </p>
@@ -188,9 +181,17 @@ const InteractiveSelector = () => {
                     performances that define who we are.
                 </p>
 
-                <p className="mt-4 md:mt-5 text-[9px] sm:text-[10px] font-medium tracking-[0.3em] text-amber-500/50 uppercase">
+                <p className="mt-4 md:mt-5 mb-8 text-[9px] sm:text-[10px] font-medium tracking-[0.3em] text-amber-500/50 uppercase">
                     Energy is not limited to Stage
                 </p>
+
+                <Link
+                    href="/team"
+                    className="hidden md:inline-flex items-center gap-2 px-6 py-3 bg-gray-900 text-white text-xs font-bold tracking-[0.2em] uppercase hover:bg-amber-500 transition-colors duration-300 pointer-events-auto w-fit"
+                >
+                    <ArrowLeft className="size-4" />
+                    Our Team
+                </Link>
             </div>
 
             {/* ═══════════════════════════════════════════
