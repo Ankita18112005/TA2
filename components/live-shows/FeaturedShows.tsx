@@ -1,13 +1,38 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
-import { useState } from "react";
+import { useState, useRef, useEffect, useCallback } from "react";
 import { Play, MapPin, Calendar } from "lucide-react";
 import { SHOWS } from "@/constants/data";
 import GridBg from "@/components/shared/GridBg";
 
 export default function FeaturedShows() {
     const [activeVideo, setActiveVideo] = useState<number | null>(null);
+    const videoRefs = useRef<(HTMLDivElement | null)[]>([]);
+
+    const setVideoRef = useCallback((el: HTMLDivElement | null, index: number) => {
+        videoRefs.current[index] = el;
+    }, []);
+
+    // Stop video when it scrolls out of view
+    useEffect(() => {
+        if (activeVideo === null) return;
+
+        const el = videoRefs.current[activeVideo];
+        if (!el) return;
+
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (!entry.isIntersecting) {
+                    setActiveVideo(null);
+                }
+            },
+            { threshold: 0.2 }
+        );
+
+        observer.observe(el);
+        return () => observer.disconnect();
+    }, [activeVideo]);
 
     return (
         <section className="relative overflow-hidden py-16 bg-gray-50">
@@ -28,7 +53,10 @@ export default function FeaturedShows() {
                                 } gap-10 items-start`}
                         >
                             {/* Video / Thumbnail */}
-                            <div className="relative w-full lg:w-3/5 aspect-video bg-gray-200 overflow-hidden group">
+                            <div
+                                ref={(el) => setVideoRef(el, i)}
+                                className="relative w-full lg:w-3/5 aspect-video bg-gray-200 overflow-hidden group"
+                            >
                                 {activeVideo === i ? (
                                     <iframe
                                         src={`${show.videoUrl}?autoplay=1`}
@@ -61,15 +89,15 @@ export default function FeaturedShows() {
                                 <h3 className="font-black text-3xl md:text-4xl tracking-tight text-gray-900 mb-4 leading-tight">
                                     {show.title}
                                 </h3>
-                                <div className="flex items-center gap-3 text-gray-400 text-sm font-mono tracking-wider uppercase mb-2">
+                                <div className="flex items-center gap-3 text-gray-500 text-sm font-mono tracking-wider uppercase mb-2">
                                     <Calendar className="size-4" />
                                     {show.date}
                                 </div>
-                                <div className="flex items-center gap-3 text-gray-400 text-sm font-mono tracking-wider uppercase mb-6">
+                                <div className="flex items-center gap-3 text-gray-500 text-sm font-mono tracking-wider uppercase mb-6">
                                     <MapPin className="size-4" />
                                     {show.venue}
                                 </div>
-                                <p className="text-gray-500 font-mono text-sm tracking-wide leading-relaxed uppercase">
+                                <p className="text-gray-800 font-mono text-sm tracking-wide leading-relaxed uppercase">
                                     {show.description}
                                 </p>
                                 <button

@@ -343,7 +343,7 @@ export const Component = () => {
                 "YouTube": "hover:bg-red-600 hover:text-white",
                 "Instagram": "hover:bg-amber-600 hover:text-white",
                 "Spotify": "hover:bg-green-500 hover:text-white",
-                "Twitter / X": "hover:bg-black hover:text-white",
+                "Facebook": "hover:bg-blue-600 hover:text-white",
               };
               const hoverClass = brandHover[s.label] ?? "hover:bg-amber-500 hover:text-white";
               return (

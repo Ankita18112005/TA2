@@ -48,7 +48,7 @@ export default function MeetTheTeam() {
                                 MUSIC & BAND
                             </p>
                         </div>
-                        <p className="font-mono text-sm tracking-wide text-gray-500 uppercase leading-relaxed mt-8">
+                        <p className="font-mono text-sm tracking-wide text-gray-800 uppercase leading-relaxed mt-8">
                             Years of shaping the musical identity of artists, brands and
                             projects across genres.
                         </p>

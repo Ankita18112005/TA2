@@ -53,7 +53,7 @@ export default function TrackModal({ isOpen, onClose, track }: TrackModalProps) 
 
   const videoId = getYouTubeId(track.url);
   const thumbnailUrl = videoId
-    ? `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`
+    ? `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`
     : null;
 
   return (

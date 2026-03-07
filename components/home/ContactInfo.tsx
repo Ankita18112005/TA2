@@ -33,7 +33,7 @@ export default function ContactInfo() {
                             "YouTube": { border: "hover:border-red-500", bg: "hover:bg-red-50", icon: "group-hover:bg-red-500", text: "group-hover:text-red-500" },
                             "Instagram": { border: "hover:border-amber-700", bg: "hover:bg-amber-50", icon: "group-hover:bg-amber-600", text: "group-hover:text-amber-600" },
                             "Spotify": { border: "hover:border-green-500", bg: "hover:bg-green-50", icon: "group-hover:bg-green-500", text: "group-hover:text-green-500" },
-                            "Twitter / X": { border: "hover:border-black", bg: "hover:bg-gray-100", icon: "group-hover:bg-black", text: "group-hover:text-black" },
+                            "Facebook": { border: "hover:border-blue-600", bg: "hover:bg-blue-50", icon: "group-hover:bg-blue-600", text: "group-hover:text-blue-600" },
                         };
                         const c = brandColors[s.label] ?? { border: "hover:border-amber-500", bg: "hover:bg-amber-50", icon: "group-hover:bg-amber-500", text: "group-hover:text-amber-500" };
                         return (

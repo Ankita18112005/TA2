@@ -54,7 +54,8 @@ export const TRACKS = [
     { title: "Sraboner Sesh Baridhara", genre: "Bengali Original", year: "2025", url: "https://youtu.be/6qBDc4Udo9Q" },
     { title: "Ichhera Jaak Ure", genre: "Bengali Emotional", year: "2025", url: "https://youtu.be/vfLLQYluR6c" },
     { title: "Bou Katha", genre: "Bengali Kirtan", year: "2024", url: "https://youtu.be/VIsw5ncZeTg" },
-    { title: "Tomake Chuye Dilam", genre: "Bengali Soulful", year: "2024", url: "https://youtu.be/mMZLM38ePJY" },
+    { title: "Sapnon Se Bhare Naina", genre: "Hindi Soulful", year: "2024", url: "https://youtu.be/criKWZPlK98" },
+    { title: "Ae Mere Pyare Watan", genre: "Hindi Patriotic", year: "2025", url: "https://youtu.be/zkd49hx90LQ" },
 ];
 
 // ── Team: Members ───────────────────────────────────────────────────────
@@ -69,13 +70,13 @@ export const MEMBERS = [
         musicLinks: [
             { title: "Sraboner Sesh Baridhara", url: "https://youtu.be/6qBDc4Udo9Q" },
             { title: "Ichhera Jaak Ure", url: "https://youtu.be/vfLLQYluR6c" },
-            { title: "Tomake Chuye Dilam", url: "https://youtu.be/mMZLM38ePJY" },
-            { title: "Ae Mere Pyare Watan", url: "https://youtu.be/hQu0HzZj8vY" },
+            { title: "Sapnon Se Bhare Naina", url: "https://youtu.be/criKWZPlK98" },
+            { title: "Ae Mere Pyare Watan", url: "https://youtu.be/zkd49hx90LQ" },
         ],
     },
     {
         name: "PAPIA GUPTA",
-        role: "Vocalist & Songwriter",
+        role: "Songwriter & Vocalist",
         location: "KOLKATA, WEST BENGAL",
         skills: ["/ VOCALS", "/ SONGWRITING", "/ PERFORMANCE"],
         image: "images/team/papiabw.jpg",
@@ -109,7 +110,7 @@ export const MEMBERS = [
         musicLinks: [
             { title: "Sraboner Sesh Baridhara", url: "https://youtu.be/6qBDc4Udo9Q" },
             { title: "Ichhera Jaak Ure", url: "https://youtu.be/vfLLQYluR6c" },
-            { title: "Sapnon Se Bhare Naina", url: "https://youtu.be/rNuj_ZdF1Fk" },
+            { title: "Sapnon Se Bhare Naina", url: "https://youtu.be/criKWZPlK98" },
         ],
     },
 
@@ -165,11 +166,11 @@ export const SOCIALS = [
         ),
     },
     {
-        label: "Twitter / X",
-        href: "https://x.com/amusicals",
+        label: "Facebook",
+        href: "https://facebook.com/amusicals",
         icon: (
             <svg className="size-5" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M18.9 1.15h3.68l-8.04 9.19L24 22.85h-7.4l-5.8-7.58-6.63 7.58H.49l8.6-9.83L0 1.15h7.59l5.24 6.93 6.07-6.93Zm-1.29 19.5h2.04L6.48 3.24H4.3l13.31 17.41Z" />
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073Z" />
             </svg>
         ),
     },

@@ -48,7 +48,7 @@ export default function TeamMembers() {
 
                             {/* Bio + Music Links */}
                             <div className="flex flex-col justify-end flex-1 pb-4">
-                                <p className="font-mono text-sm tracking-wide text-gray-500 uppercase leading-relaxed">
+                                <p className="font-mono text-sm tracking-wide text-gray-800 uppercase leading-relaxed">
                                     {m.desc}
                                 </p>
 
