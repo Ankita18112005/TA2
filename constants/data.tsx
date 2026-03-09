@@ -33,7 +33,7 @@ export const LIVE_HERO_IMAGES = [
 ];
 
 // ── Team: Hero Watermark Names & Skills ─────────────────────────────────
-export const TEAM_HERO_NAMES = ["AYAN", "PAPIA", "HRICK", "SARTHAK"];
+export const TEAM_HERO_NAMES = ["AYAN", "PAPIA", "HRICK", "SARTHAK", "SWAPNIL"];
 
 export const TEAM_HERO_SKILLS = [
     "VOCALS",
@@ -107,6 +107,19 @@ export const MEMBERS = [
         skills: ["/ MIXING", "/ GUITAR", "/ MASTERING"],
         image: "images/team/hrickbw.jpg",
         desc: "Innovative producer fusing world music traditions with joyful electronic sounds.",
+        musicLinks: [
+            { title: "Sraboner Sesh Baridhara", url: "https://youtu.be/6qBDc4Udo9Q" },
+            { title: "Ichhera Jaak Ure", url: "https://youtu.be/vfLLQYluR6c" },
+            { title: "Sapnon Se Bhare Naina", url: "https://youtu.be/criKWZPlK98" },
+        ],
+    },
+    {
+        name: "SWAPNIL DEY",
+        role: "Drummer & Percussionist",
+        location: "KOLKATA, WEST BENGAL",
+        skills: ["/ DRUMS", "/ PERCUSSION", "/ RHYTHM"],
+        image: "images/team/swapnilbw.jpg",
+        desc: "A dynamic drummer bringing powerful rhythm and groove to every live and studio performance.",
         musicLinks: [
             { title: "Sraboner Sesh Baridhara", url: "https://youtu.be/6qBDc4Udo9Q" },
             { title: "Ichhera Jaak Ure", url: "https://youtu.be/vfLLQYluR6c" },
@@ -211,7 +224,7 @@ export const SHOWS = [
 export const GALLERY = [
     { src: "/images/gallery/gal1.jpg", alt: "Live performance wide shot" },
     { src: "/images/gallery/gal2.jpg", alt: "the moment live" },
-    { src: "/images/gallery/gal3.jpg", alt: "live vocals" },
+    { src: "/images/gallery/gal3.jpg", alt: "drummer in action" },
     { src: "/images/gallery/gal4.jpg", alt: "On-stage close-up" },
     { src: "/images/gallery/gal5.jpg", alt: "Sound check" },
     { src: "/images/gallery/gal6.jpg", alt: "Band together" },
