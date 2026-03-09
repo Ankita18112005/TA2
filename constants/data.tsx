@@ -28,7 +28,7 @@ export const LIVE_HERO_IMAGES = [
     { src: "/images/live-hero/lh6.jpg", position: "center top" },
     { src: "/images/live-hero/lh7.jpg", position: "center" },
     { src: "/images/live-hero/lh8.jpg", position: "center top" },
-    { src: "/images/live-hero/lh9.jpg", position: "center 35%" },
+    { src: "/images/live-hero/lh9.jpg", position: "center top" },
     { src: "/images/live-hero/lh10.jpg", position: "center" },
 ];
 
@@ -72,6 +72,9 @@ export const MEMBERS = [
             { title: "Ichhera Jaak Ure", url: "https://youtu.be/vfLLQYluR6c" },
             { title: "Sapnon Se Bhare Naina", url: "https://youtu.be/criKWZPlK98" },
             { title: "Ae Mere Pyare Watan", url: "https://youtu.be/zkd49hx90LQ" },
+            { title: "Sarforashi ki tamanna", url: "https://www.youtube.com/watch?v=4K66FS427ME" },
+            { title: "Jodi Jante Chao", url: "https://youtu.be/NocQvDJFclY?si=vieMY-2x5cTvCgd5" },
+            { title: "Jeevan Sahare Prabhu", url: "https://www.youtube.com/watch?v=YtGxgICD1hw" },
         ],
     },
     {
@@ -98,6 +101,8 @@ export const MEMBERS = [
             { title: "Sraboner Sesh Baridhara", url: "https://youtu.be/6qBDc4Udo9Q" },
             { title: "Bou Katha", url: "https://youtu.be/VIsw5ncZeTg" },
             { title: "Nadir Shabda", url: "https://youtu.be/0NOSSaDbOOU" },
+            { title: "Phire Esho Bhalobashay", url: "https://youtu.be/XTZeu0LgCZg?si=a035HrRFcy12Tfku" },
+            { title: "Asbe Jokhon", url: "https://youtu.be/0NOSSaDbOOU?si=GrjtCdW63x9jjp9B" },
         ],
     },
     {
@@ -111,6 +116,8 @@ export const MEMBERS = [
             { title: "Sraboner Sesh Baridhara", url: "https://youtu.be/6qBDc4Udo9Q" },
             { title: "Ichhera Jaak Ure", url: "https://youtu.be/vfLLQYluR6c" },
             { title: "Sapnon Se Bhare Naina", url: "https://youtu.be/criKWZPlK98" },
+            { title: "Somoy", url: "https://youtu.be/SaGFPIcG-q0?si=XZN7rmsHDiL5Fyeg" },
+            { title: "ChandraChooda", url: "https://youtu.be/rNuj_ZdF1Fk?si=eiYa0IFz9lkTWR9-"}
         ],
     },
     {
