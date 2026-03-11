@@ -33,7 +33,7 @@ export const LIVE_HERO_IMAGES = [
 ];
 
 // ── Team: Hero Watermark Names & Skills ─────────────────────────────────
-export const TEAM_HERO_NAMES = ["AYAN", "PAPIA", "HRICK", "SARTHAK", "SWAPNIL"];
+export const TEAM_HERO_NAMES = ["AYAN", "PAPIA", "HRICK", "SWAPNIL", "SARTHAK"];
 
 export const TEAM_HERO_SKILLS = [
     "VOCALS",
@@ -73,8 +73,8 @@ export const MEMBERS = [
             { title: "Sapnon Se Bhare Naina", url: "https://youtu.be/criKWZPlK98" },
             { title: "Ae Mere Pyare Watan", url: "https://youtu.be/zkd49hx90LQ" },
             { title: "Sarforashi ki tamanna", url: "https://www.youtube.com/watch?v=4K66FS427ME" },
-            { title: "Jodi Jante Chao", url: "https://youtu.be/NocQvDJFclY?si=vieMY-2x5cTvCgd5" },
-            { title: "Jeevan Sahare Prabhu", url: "https://www.youtube.com/watch?v=YtGxgICD1hw" },
+            
+            
         ],
     },
     {
@@ -160,7 +160,7 @@ export const MEMBERS = [
 export const SOCIALS = [
     {
         label: "YouTube",
-        href: "https://youtube.com/@amusicals",
+        href: "https://youtube.com/@ayanmukherjee-official?si=tH9VE4YGp4NHuReV",
         icon: (
             <svg className="size-5" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M23.5 6.19a3.02 3.02 0 0 0-2.12-2.14C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.38.55A3.02 3.02 0 0 0 .5 6.19 31.6 31.6 0 0 0 0 12a31.6 31.6 0 0 0 .5 5.81 3.02 3.02 0 0 0 2.12 2.14c1.88.55 9.38.55 9.38.55s7.5 0 9.38-.55a3.02 3.02 0 0 0 2.12-2.14A31.6 31.6 0 0 0 24 12a31.6 31.6 0 0 0-.5-5.81ZM9.75 15.02V8.98L15.5 12l-5.75 3.02Z" />
@@ -178,7 +178,7 @@ export const SOCIALS = [
     },
     {
         label: "Spotify",
-        href: "https://open.spotify.com/artist/amusicals",
+        href: "https://open.spotify.com/artist/3VlYW56UQ3RUSal9h7SueC?si=Y-Di1_cQStK8PmWNLGhiUA",
         icon: (
             <svg className="size-5" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0Zm5.5 17.31a.75.75 0 0 1-1.03.25c-2.82-1.72-6.37-2.11-10.56-1.16a.75.75 0 1 1-.34-1.46c4.57-1.05 8.5-.6 11.68 1.34a.75.75 0 0 1 .25 1.03Zm1.47-3.27a.94.94 0 0 1-1.29.31c-3.22-1.98-8.14-2.56-11.95-1.4a.94.94 0 1 1-.54-1.8c4.36-1.32 9.77-.68 13.47 1.6a.94.94 0 0 1 .31 1.29Zm.13-3.4C15.23 8.33 8.85 8.12 5.15 9.19a1.12 1.12 0 1 1-.65-2.15c4.24-1.23 11.3-.99 15.76 1.62a1.12 1.12 0 0 1-1.16 1.92v.06Z" />
@@ -187,7 +187,7 @@ export const SOCIALS = [
     },
     {
         label: "Facebook",
-        href: "https://facebook.com/amusicals",
+        href: "https://www.facebook.com/share/17q8q7i7cG/?mibextid=wwXIfr",
         icon: (
             <svg className="size-5" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073Z" />

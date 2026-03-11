@@ -102,10 +102,10 @@ export default function RootLayout({
       name: "Kolkata, West Bengal, India",
     },
     sameAs: [
-      "https://youtube.com/@amusicals",
+      "https://youtube.com/@ayanmukherjee-official?si=tH9VE4YGp4NHuReV",
       "https://instagram.com/amusicals",
-      "https://open.spotify.com/artist/amusicals",
-      "https://facebook.com/amusicals",
+      "https://open.spotify.com/artist/3VlYW56UQ3RUSal9h7SueC?si=Y-Di1_cQStK8PmWNLGhiUA",
+      "https://www.facebook.com/share/17q8q7i7cG/?mibextid=wwXIfr",
     ],
     image: "https://amusicals.in/images/seo/og-image.jpg",
   };
