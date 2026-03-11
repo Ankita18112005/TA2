@@ -103,7 +103,7 @@ export default function RootLayout({
     },
     sameAs: [
       "https://youtube.com/@ayanmukherjee-official?si=tH9VE4YGp4NHuReV",
-      "https://instagram.com/amusicals",
+      "https://www.instagram.com/ayan.mukherjee.official?igsh=MWE1ZmRxN2RoMWcybw%3D%3D&utm_source=qr",
       "https://open.spotify.com/artist/3VlYW56UQ3RUSal9h7SueC?si=Y-Di1_cQStK8PmWNLGhiUA",
       "https://www.facebook.com/share/17q8q7i7cG/?mibextid=wwXIfr",
     ],
