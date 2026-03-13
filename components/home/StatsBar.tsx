@@ -4,10 +4,10 @@ import { useRef, useState, useEffect } from "react";
 import Counter from "@/components/ui/Counter";
 
 const stats = [
-    { value: 12, suffix: "+", label: "Projects", places: [10, 1] },
+    { value: 24, suffix: "+", label: "Projects", places: [10, 1] },
     { value: 50, suffix: "+", label: "Live Shows", places: [10, 1] },
     { value: 15, suffix: "+", label: "Collaborations", places: [10, 1] },
-    { value: 4, suffix: "", label: "Members", places: [1] },
+    { value: 6, suffix: "", label: "Members", places: [1] },
 ];
 
 export default function StatsBar() {

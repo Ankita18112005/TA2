@@ -33,7 +33,7 @@ export const LIVE_HERO_IMAGES = [
 ];
 
 // ── Team: Hero Watermark Names & Skills ─────────────────────────────────
-export const TEAM_HERO_NAMES = ["AYAN", "PAPIA", "HRICK", "SWAPNIL", "SARTHAK"];
+export const TEAM_HERO_NAMES = ["AYAN", "PAPIA", "HRICK", "NILADRI", "SWAPNIL", "SARTHAK"];
 
 export const TEAM_HERO_SKILLS = [
     "VOCALS",
@@ -46,6 +46,7 @@ export const TEAM_HERO_SKILLS = [
     "MASTERING",
     "SONGWRITING",
     "SOUND DESIGN",
+    "BASS",
     "LIVE PERFORMANCE",
 ];
 
@@ -73,8 +74,8 @@ export const MEMBERS = [
             { title: "Sapnon Se Bhare Naina", url: "https://youtu.be/criKWZPlK98" },
             { title: "Ae Mere Pyare Watan", url: "https://youtu.be/zkd49hx90LQ" },
             { title: "Sarforashi ki tamanna", url: "https://www.youtube.com/watch?v=4K66FS427ME" },
-            
-            
+
+
         ],
     },
     {
@@ -101,7 +102,7 @@ export const MEMBERS = [
             { title: "Sraboner Sesh Baridhara", url: "https://youtu.be/6qBDc4Udo9Q" },
             { title: "Bou Katha", url: "https://youtu.be/VIsw5ncZeTg" },
             { title: "Nadir Shabda", url: "https://youtu.be/0NOSSaDbOOU" },
-        
+
 
         ],
     },
@@ -117,7 +118,7 @@ export const MEMBERS = [
             { title: "Ichhera Jaak Ure", url: "https://youtu.be/vfLLQYluR6c" },
             { title: "Sapnon Se Bhare Naina", url: "https://youtu.be/criKWZPlK98" },
             { title: "Somoy", url: "https://youtu.be/SaGFPIcG-q0?si=XZN7rmsHDiL5Fyeg" },
-            { title: "ChandraChooda", url: "https://youtu.be/rNuj_ZdF1Fk?si=eiYa0IFz9lkTWR9-"}
+            { title: "ChandraChooda", url: "https://youtu.be/rNuj_ZdF1Fk?si=eiYa0IFz9lkTWR9-" }
         ],
     },
     {
@@ -125,13 +126,22 @@ export const MEMBERS = [
         role: "Drummer & Percussionist",
         location: "KOLKATA, WEST BENGAL",
         skills: ["/ DRUMS", "/ PERCUSSION", "/ RHYTHM"],
-        image: "images/team/swapnilbw.jpg",
+        image: "images/team/swapnilcol.jpg",
         desc: "A dynamic drummer bringing powerful rhythm and groove to every live and studio performance.",
         musicLinks: [
             { title: "Sraboner Sesh Baridhara", url: "https://youtu.be/6qBDc4Udo9Q" },
             { title: "Ichhera Jaak Ure", url: "https://youtu.be/vfLLQYluR6c" },
             { title: "Sapnon Se Bhare Naina", url: "https://youtu.be/criKWZPlK98" },
         ],
+    },
+    {
+        name: "NILADRI BISWAS",
+        role: "Bassist & Rhythmic",
+        location: "KOLKATA, WEST BENGAL",
+        skills: ["/ BASS", "/ GROOVE", "/ LIVE PERFORMANCE"],
+        image: "images/team/niladricol.jpg",
+        desc: "A versatile bassist anchoring every track with deep groove and melodic precision.",
+        musicLinks: [],
     },
 
 ];
@@ -239,4 +249,9 @@ export const GALLERY = [
     { src: "/images/gallery/gal8.jpg", alt: "the sound of keys" },
     { src: "/images/gallery/gal9.jpg", alt: "the stage moment" },
     { src: "/images/gallery/gal10.jpg", alt: "Band performing" },
+    { src: "/images/gallery/gal11.jpg", alt: "Bassist in the groove" },
+    { src: "/images/gallery/gal12.jpg", alt: "Drums under the lights" },
+    { src: "/images/gallery/gal13.jpg", alt: "Guitar solo spotlight" },
+    { src: "/images/gallery/gal14.jpg", alt: "Vocalist on stage" },
+    { src: "/images/gallery/gal15.jpg", alt: "Band under stage haze" },
 ];
