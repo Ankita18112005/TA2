@@ -51,9 +51,9 @@ export const metadata: Metadata = {
       "Explore original Bengali and Hindi compositions, studio productions and live performances by AMusicals — a music collective based in Kolkata.",
     images: [
       {
-        url: "/images/seo/og-image.jpg",
-        width: 1200,
-        height: 630,
+        url: "/ogimage.png",
+        width: 1472,
+        height: 768,
         alt: "AMusicals — Original Music from Kolkata",
       },
     ],
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
     title: "AMusicals | Original Music from Kolkata",
     description:
       "Original Bengali and Hindi compositions, studio productions and live performances by AMusicals.",
-    images: ["/images/seo/og-image.jpg"],
+    images: ["/ogimage.png"],
   },
 
   robots: {
@@ -107,7 +107,7 @@ export default function RootLayout({
       "https://open.spotify.com/artist/3VlYW56UQ3RUSal9h7SueC?si=Y-Di1_cQStK8PmWNLGhiUA",
       "https://www.facebook.com/share/17q8q7i7cG/?mibextid=wwXIfr",
     ],
-    image: "https://amusicals.in/images/seo/og-image.jpg",
+    image: "https://amusicals.in/ogimage.png",
   };
 
   return (
